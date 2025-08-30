@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Ads G2 驗證代辦 - 知行跨媒體廣告行銷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FF7D00',
+                        dark: '#1D2939',
+                        light: '#F9FAFB',
+                        muted: '#667085'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-50 text-dark">
+    <!-- 導航欄 -->
+    <header id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                    <i class="fa fa-line-chart text-white text-xl"></i>
+                </div>
+                <span class="text-lg md:text-xl font-bold text-primary">知行跨媒體</span>
+            </a>
+            
+            <!-- 桌面端菜單 -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-dark hover:text-primary transition-colors">服務項目</a>
+                <a href="#examples" class="text-dark hover:text-primary transition-colors">成功案例</a>
+                <a href="#form" class="text-dark hover:text-primary transition-colors">免費諮詢</a>
+                <a href="#health-check" class="text-dark hover:text-primary transition-colors">網站健檢</a>
+                <a href="https://line.me/ti/p/@271utguf" target="_blank" class="bg-secondary hover:bg-secondary/90 text-white px-5 py-2 rounded-full transition-all shadow-md hover:shadow-lg">
+                    立即諮詢
+                </a>
+            </nav>
+            
+            <!-- 手機端菜單按鈕 -->
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- 手機端菜單 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                <a href="#services" class="text-dark hover:text-primary transition-colors py-2">服務項目</a>
+                <a href="#examples" class="text-dark hover:text-primary transition-colors py-2">成功案例</a>
+                <a href="#form" class="text-dark hover:text-primary transition-colors py-2">免費諮詢</a>
+                <a href="#health-check" class="text-dark hover:text-primary transition-colors py-2">網站健檢</a>
+                <a href="https://line.me/ti/p/@271utguf" target="_blank" class="bg-secondary hover:bg-secondary/90 text-white px-5 py-3 rounded-full text-center transition-all shadow-md">
+                    立即諮詢
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄區 -->
+    <section class="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-primary/5 to-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-4">
+                        <span class="text-primary">Google Ads G2 驗證代辦</span>
+                    </h1>
+                    <p class="text-[clamp(1.2rem,2vw,1.5rem)] text-muted mb-8 font-medium">
+                        快速、安全、零失誤
+                    </p>
+                    <p class="text-lg text-dark/80 mb-8 max-w-lg">
+                        專業團隊協助您完成各平台驗證，從Google Ads G2到各種跨境購物網站架設，提供一站式行銷解決方案，讓您的業務快速拓展。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://line.me/ti/p/@271utguf" target="_blank" class="bg-secondary hover:bg-secondary/90 text-white text-center px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                            <i class="fa fa-comment mr-2"></i>立即諮詢
+                        </a>
+                        <a href="#services" class="bg-white hover:bg-gray-50 text-primary border border-primary text-center px-8 py-4 rounded-full text-lg font-medium transition-all shadow-md hover:shadow-lg">
+                            了解更多服務
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 flex items-center space-x-6">
+                        <div class="flex -space-x-2">
+                            <img src="https://picsum.photos/seed/client1/100" alt="客戶頭像" class="w-10 h-10 rounded-full border-2 border-white">
+                            <img src="https://picsum.photos/seed/client2/100" alt="客戶頭像" class="w-10 h-10 rounded-full border-2 border-white">
+                            <img src="https://picsum.photos/seed/client3/100" alt="客戶頭像" class="w-10 h-10 rounded-full border-2 border-white">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary border-2 border-white flex items-center justify-center text-xs font-bold">
+                                99+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center text-yellow-400 mb-1">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span class="ml-2 text-dark font-medium">4.9/5</span>
+                            </div>
+                            <p class="text-sm text-muted">來自超過200位客戶的好評</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform md:rotate-2 transition-transform hover:rotate-0 duration-500">
+                        <img src="https://picsum.photos/seed/googleads/800/600" alt="Google Ads G2 驗證代辦服務" class="w-full h-auto">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                            <p class="text-white font-medium">已協助超過500家企業完成驗證</p>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服務項目 -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">我們的全方位服務</h2>
+                <p class="text-muted text-lg max-w-2xl mx-auto">提供從平台驗證、網站架設到行銷推廣的一站式解決方案，讓您的業務無後顧之憂</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 服務卡片1 -->
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-google text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Google Ads G2 驗證</h3>
+                    <p class="text-muted mb-4">專業團隊代辦Google Ads G2驗證，熟悉審核標準，確保一次通過，節省您的寶貴時間。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">資料準備指導</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">全程代辦服務</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">審核快速通過</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服務卡片2 -->
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-shopping-cart text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">跨境購物網站架設</h3>
+                    <p class="text-muted mb-4">專精於Wix、WordPress等平台，打造符合跨境電商需求的購物網站，支援多語言與多貨幣。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">Wix/WordPress架設</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">支付系統整合</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">多語言支援</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服務卡片3 -->
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-bullhorn text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">廣告行銷代操</h3>
+                    <p class="text-muted mb-4">專業團隊代為操作FB、IG、LINE、Google等平台廣告，精準投放，提高轉換率，降低行銷成本。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">多平台廣告投放</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">數據分析優化</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">ROI最大化策略</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服務卡片4 -->
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-search text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">SEO 關鍵詞優化</h3>
+                    <p class="text-muted mb-4">透過專業SEO技術，提升網站在搜尋引擎的排名，增加自然流量，提高品牌曝光度。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">關鍵詞研究分析</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">網站內容優化</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">排名追蹤與報告</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服務卡片5 -->
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-paint-brush text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">設計服務</h3>
+                    <p class="text-muted mb-4">提供LOGO商標、菜單、手提袋等設計服務，打造獨特品牌形象，提升品牌價值。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">品牌識別設計</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">行銷物料設計</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">包裝設計</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 服務卡片6 -->
+                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fa fa-file-text text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">文案與翻譯</h3>
+                    <p class="text-muted mb-4">提供企劃書撰寫、多語言翻譯服務，協助您順利拓展國際市場，與客戶順利溝通。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">商業企劃書撰寫</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">專業文件翻譯</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
+                            <span class="text-dark/80">行銷文案創作</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section id="examples" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">成功案例與廣告範例</h2>
+                <p class="text-muted text-lg max-w-2xl mx-auto">我們協助眾多客戶成功完成各項驗證與行銷計劃，以下是部分案例展示</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- 案例1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://picsum.photos/seed/case1/800/600" alt="Google Ads G2 驗證成功案例" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold">電商平台 Google Ads G2 驗證</h3>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">成功案例</span>
+                        </div>
+                        <p class="text-muted mb-4">協助某跨境電商平台順利通過Google Ads G2驗證，廣告投放後銷售額提升230%。</p>
+                        <div class="flex items-center text-sm text-muted">
+                            <span class="flex items-center mr-4"><i class="fa fa-calendar mr-1"></i> 2023年5月</span>
+                            <span class="flex items-center"><i class="fa fa-tags mr-1"></i> Google Ads, 電商</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 案例2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-60 overflow-hidden">
+                        <img src="https://picsum.photos/seed/case2/800/600" alt="跨境購物網站架設案例" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <h3 class="text-xl font-bold">時尚品牌跨境購物網站</h3>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">成功案例</span>
+                        </div>
+                        <p class="text-muted mb-4">使用WordPress為時尚品牌打造跨境購物網站，支援6種語言，3個月內國際訂單成長180%。</p>
+                        <div class="flex items-center text-sm text-muted">
+                            <span class="flex items-center mr-4"><i class="fa fa-calendar mr-1"></i> 2023年3月</span>
+                            <span class="flex items-center"><i class="fa fa-tags mr-1"></i> 網站架設, 跨境電商</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 廣告範例 -->
+            <h3 class="text-2xl font-bold mb-8 text-center">廣告附加資訊範例</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 廣告範例1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-google text-2xl text-primary mr-3"></i>
+                        <h4 class="font-bold text-lg">Google Ads 範例</h4>
+                    </div>
+                    <p class="text-dark/80 mb-3"><strong>標題:</strong> 專業Google Ads G2驗證代辦服務</p>
+                    <p class="text-dark/80 mb-3"><strong>描述:</strong> 快速通過驗證，專業團隊代辦，零失敗案例，立即諮詢享優惠。</p>
+                </div>
+                
+                <!-- 廣告範例2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-facebook text-2xl text-[#1877F2] mr-3"></i>
+                        <h4 class="font-bold text-lg">Facebook 廣告範例</h4>
+                    </div>
+                    <p class="text-dark/80 mb-3"><strong>標題:</strong> 跨境電商網站架設 + 行銷推廣</p>
+                    <p class="text-dark/80 mb-3"><strong>描述:</strong> 一站式服務，從網站建立到客戶轉換，讓業務輕鬆拓展全球。</p>
+                </div>
+                
+                <!-- 廣告範例3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <i class="fa fa-line text-2xl text-[#00C300] mr-3"></i>
+                        <h4 class="font-bold text-lg">LINE 廣告範例</h4>
+                    </div>
+                    <p class="text-dark/80 mb-3"><strong>標題:</strong> 網站SEO優化服務</p>
+                    <p class="text-dark/80 mb-3"><strong>描述:</strong> 提升搜尋排名，增加自然流量，按月收費，效果保證。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 為什麼選擇我們 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-6">為什麼選擇我們的服務</h2>
+                    <p class="text-muted text-lg mb-8">我們擁有多年行業經驗，熟悉各平台規則與行銷技巧，為客戶提供高品質服務</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-check-circle text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">專業團隊</h3>
+                                <p class="text-muted">團隊成員皆具備相關認證與豐富經驗，熟悉各平台操作與審核標準。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-bolt text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">高效服務</h3>
+                                <p class="text-muted">快速回應客戶需求，縮短驗證與架設時間，讓您儘早展開業務。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-shield text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">安全保障</h3>
+                                <p class="text-muted">嚴格保密客戶資料，確保所有操作符合平台規範，避免帳號風險。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fa fa-life-ring text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">全程支援</h3>
+                                <p class="text-muted">提供售後服務與技術支援，隨時解決客戶問題，確保業務順利運行。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://picsum.photos/seed/team/800/600" alt="我們的專業團隊" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -z-10 top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -z-10 -bottom-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+                    
+                    <!-- 數據統計 -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <i class="fa fa-trophy text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">服務成果</h4>
+                                <p class="text-sm text-muted">客戶滿意度與成果</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary">98%</p>
+                                <p class="text-sm text-muted">驗證通過率</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-3xl font-bold text-primary">500+</p>
+                                <p class="text-sm text-muted">成功案例</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 網站免費健檢 -->
+    <section id="health-check" class="py-20 bg-gradient-to-br from-primary/5 to-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12 bg-primary text-white">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4">網站免費健檢</h2>
+                        <p class="mb-6 opacity-90">我們提供專業的網站健檢服務，分析您的網站表現，找出問題並提供改進建議，提升網站效能與轉換率。</p>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-start">
+                                <i class="fa fa-check-circle mt-1 mr-3"></i>
+                                <span>SEO表現分析</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-check-circle mt-1 mr-3"></i>
+                                <span>行動裝置相容性檢查</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-check-circle mt-1 mr-3"></i>
+                                <span>網站速度與效能評估</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-check-circle mt-1 mr-3"></i>
+                                <span>使用者體驗分析</span>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fa fa-check-circle mt-1 mr-3"></i>
+                                <span>完整改進建議報告</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#form" class="inline-block bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-full font-medium transition-colors">
+                            立即申請健檢
+                        </a>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-xl font-bold mb-6">健檢流程</h3>
+                        
+                        <div class="space-y-8">
+                            <div class="flex">
+                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">1</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold mb-2">提交健檢申請</h4>
+                                    <p class="text-muted">填寫表單提供您的網站資訊與聯絡方式</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">2</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold mb-2">專業分析評估</h4>
+                                    <p class="text-muted">我們的專業團隊將對您的網站進行全面分析</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">3</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold mb-2">收到健檢報告</h4>
+                                    <p class="text-muted">在3個工作日內收到詳細的健檢報告與建議</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex">
+                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">4</div>
+                                <div class="ml-4">
+                                    <h4 class="font-bold mb-2">免費諮詢說明</h4>
+                                    <p class="text-muted">我們將與您聯繫，解釋報告內容並提供改進方案</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡諮詢表單 -->
+    <section id="form" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">聯絡我們</h2>
+                <p class="text-muted text-lg max-w-2xl mx-auto">填寫以下表單，我們的專業顧問將儘快與您聯繫，為您提供詳細的服務說明與報價</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                    <div class="lg:col-span-2 bg-gray-50 rounded-xl p-8">
+                        <h3 class="text-xl font-bold mb-6">聯絡資訊</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-bold mb-3 flex items-center">
+                                    <i class="fa fa-envelope text-primary mr-2"></i> 電子郵件
+                                </h4>
+                                <p class="text-muted mb-2">zxunimedia@gmail.com</p>
+                                <a href="mailto:zxunimedia@gmail.com" class="text-primary hover:underline">傳送郵件</a>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold mb-3 flex items-center">
+                                    <i class="fa fa-line text-[#00C300] mr-2"></i> LINE 聯絡
+                                </h4>
+                                <p class="text-muted mb-2">@271utguf</p>
+                                <a href="https://line.me/ti/p/@271utguf" target="_blank" class="text-primary hover:underline">加入好友</a>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold mb-3 flex items-center">
+                                    <i class="fa fa-facebook-square text-[#1877F2] mr-2"></i> 粉絲專頁
+                                </h4>
+                                <p class="text-muted mb-2">知行跨媒體廣告行銷</p>
+                                <a href="#" class="text-primary hover:underline">前往粉專</a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h4 class="font-bold mb-4">服務時間</h4>
+                            <p class="text-muted mb-2">星期一至星期五: 9:00 - 18:00</p>
+                            <p class="text-muted">星期六: 9:00 - 12:00 (預約制)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-3 bg-white rounded-xl p-8 border border-gray-100 shadow-md">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-dark font-medium mb-2">姓名或公司名稱 <span class="text-red-500">*</span></label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                        placeholder="請輸入您的姓名或公司名稱">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-dark font-medium mb-2">電子郵件 <span class="text-red-500">*</span></label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                        placeholder="請輸入您的電子郵件">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-dark font-medium mb-2">感興趣的服務</label>
+                                <select id="service" name="service"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+                                    <option value="">請選擇服務類型</option>
+                                    <option value="google-ads">Google Ads G2 驗證</option>
+                                    <option value="website">跨境購物網站架設</option>
+                                    <option value="marketing">廣告行銷代操</option>
+                                    <option value="seo">SEO 關鍵詞優化</option>
+                                    <option value="design">設計服務</option>
+                                    <option value="writing">文案與翻譯</option>
+                                    <option value="other">其他服務</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-dark font-medium mb-2">諮詢內容 <span class="text-red-500">*</span></label>
+                                <textarea id="message" name="message" rows="5" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+                                    placeholder="請詳細描述您的需求或問題，以便我們提供更精確的回覆"></textarea>
+                            </div>
+                            
+                            <div>
+                                <label class="flex items-start">
+                                    <input type="checkbox" required
+                                        class="mt-1 mr-3 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
+                                    <span class="text-sm text-muted">我同意接收相關服務資訊與行銷內容</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit"
+                                class="w-full bg-secondary hover:bg-secondary/90 text-white font-medium py-4 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
+                                提交諮詢
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁腳 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                            <i class="fa fa-line-chart text-primary text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">知行跨媒體</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">提供Google Ads G2驗證、網站架設、廣告行銷等一站式服務，協助企業拓展業務，提升品牌價值。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="https://line.me/ti/p/@271utguf" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
+                            <i class="fa fa-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
+                            <i class="fa fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">服務項目</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Google Ads G2 驗證</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">跨境購物網站架設</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">廣告行銷代操</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">SEO 關鍵詞優化</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">設計服務</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">文案與翻譯</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">快速連結</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">關於我們</a></li>
+                        <li><a href="#examples" class="text-gray-400 hover:text-white transition-colors">成功案例</a></li>
+                        <li><a href="#health-check" class="text-gray-400 hover:text-white transition-colors">網站免費健檢</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">收費標準</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">常見問題</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">聯絡我們</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">聯絡資訊</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">zxunimedia@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-line text-[#00C300] mt-1 mr-3"></i>
+                            <span class="text-gray-400">@271utguf</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-facebook-square text-[#1877F2] mt-1 mr-3"></i>
+                            <span class="text-gray-400">知行跨媒體廣告行銷</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 知行跨媒體廣告行銷. 保留所有權利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到頂部按鈕 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 invisible">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // 手機端菜單切換
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 導航欄滾動效果
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow');
+                navbar.classList.remove('py-3', 'md:py-4');
+            } else {
+                navbar.classList.add('py-3', 'md:py-4');
+                navbar.classList.remove('py-2', 'shadow');
+            }
+        });
+        
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 關閉手機菜單
+                    mobileMenu.classList.add('hidden');
+                    
+                    // 滾動到目標位置
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 回到頂部按鈕
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 表單提交處理
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // 在真實環境中，這裡會有表單提交到伺服器的程式碼
+            // 這裡只是模擬提交成功的效果
+            
+            // 顯示提交中狀態
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> 提交中...';
+            
+            // 模擬API請求延遲
+            setTimeout(() => {
+                // 顯示成功訊息
+                contactForm.innerHTML = `
+                    <div class="text-center py-8">
+                        <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-check text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">提交成功！</h3>
+                        <p class="text-muted mb-6">感謝您的諮詢，我們的專業顧問將在24小時內與您聯繫</p>
+                        <a href="#" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg transition-colors">
+                            返回首頁
+                        </a>
+                    </div>
+                `;
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
