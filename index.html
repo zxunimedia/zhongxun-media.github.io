@@ -3,1342 +3,2643 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>奇華智能行銷股份有限公司 - AI科技整合專家</title>
+    <title>奇華智能行銷 | AI科技創新領導者</title>
+    <meta name="description" content="奇華智能行銷股份有限公司 - 李孟居總經理領導的科技創新企業，專精AI技術整合、智慧製造、電控玻璃應用與國防科技合作">
+    
+    <!-- Preload fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-            color: #ffffff;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* 粒子背景容器 */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        /* 導航欄 */
-        .navbar {
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #00ffff;
-            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #00ffff;
-            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background: linear-gradient(90deg, #00ffff, #ff00ff);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* 英雄區塊 */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 30px rgba(0, 255, 255, 0.5); }
-            to { text-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 50px rgba(255, 0, 255, 0.3); }
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: #cccccc;
-        }
-
-        .cta-button {
-            background: linear-gradient(45deg, #00ffff, #ff00ff);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        /* 區塊樣式 */
-        .section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            background: linear-gradient(45deg, #00ffff, #ff00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* 關於我們區塊 */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #cccccc;
-        }
-
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            border-color: #00ffff;
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #00ffff;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: #cccccc;
-            font-size: 1.1rem;
-        }
-
-        /* 服務區塊 */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-15px);
-            border-color: #00ffff;
-            box-shadow: 0 25px 50px rgba(0, 255, 255, 0.3);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #00ffff, #ff00ff);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            color: #00ffff;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-
-        .service-card p {
-            color: #cccccc;
-            line-height: 1.6;
-        }
-
-        /* 領導團隊區塊 */
-        .leader-profile {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .leader-profile:hover {
-            border-color: #00ffff;
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-        }
-
-        .leader-info h3 {
-            font-size: 2rem;
-            color: #00ffff;
-            margin-bottom: 0.5rem;
-        }
-
-        .leader-title {
-            font-size: 1.2rem;
-            color: #ff00ff;
-            margin-bottom: 1.5rem;
-        }
-
-        .leader-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #cccccc;
-            margin-bottom: 2rem;
-        }
-
-        .achievements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .achievement {
-            background: rgba(0, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            border-left: 4px solid #00ffff;
-        }
-
-        .achievement h4 {
-            color: #00ffff;
-            margin-bottom: 0.5rem;
-        }
-
-        .achievement p {
-            color: #cccccc;
-            font-size: 0.95rem;
-        }
-
-        /* 媒體報導區塊 */
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .media-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .media-card:hover {
-            transform: translateY(-10px);
-            border-color: #00ffff;
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-        }
-
-        .media-source {
-            color: #ff00ff;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .media-card h3 {
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .media-card p {
-            color: #cccccc;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .read-more {
-            color: #00ffff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .read-more:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
-        }
-
-        /* 產業資源區塊 */
-        .resources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .resource-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .resource-card:hover {
-            transform: translateY(-10px);
-            border-color: #00ffff;
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-        }
-
-        .resource-type {
-            background: linear-gradient(45deg, #00ffff, #ff00ff);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        .resource-card h3 {
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .resource-card p {
-            color: #cccccc;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .download-link {
-            color: #00ffff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        .download-link:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
-        }
-
-        /* 戰略夥伴區塊 */
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .partner-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .partner-card:hover {
-            transform: translateY(-10px);
-            border-color: #00ffff;
-            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-        }
-
-        .partner-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: rgba(0, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #00ffff;
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-
-        .partner-icon.carbon-tech-icon {
-            background: none;
-            border: none;
-            padding: 0;
-        }
-
-        .partner-card:hover .partner-icon {
-            background: rgba(0, 255, 255, 0.2);
-            transform: scale(1.1);
-        }
-
-        .partner-icon svg {
-            width: 40px;
-            height: 40px;
-            fill: #00ffff;
-            transition: all 0.3s ease;
-        }
-
-        .partner-card:hover .partner-icon svg {
-            fill: #ffffff;
-        }
-
-        .partner-card h3 {
-            color: #ffffff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .partner-card p {
-            color: #cccccc;
-            line-height: 1.6;
-        }
-
-        /* 聯絡我們區塊 */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 3rem;
-            border-radius: 20px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #00ffff;
-            font-weight: bold;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            border-radius: 10px;
-            color: #ffffff;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #00ffff;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-        }
-
-        .form-group textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, #00ffff, #ff00ff);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .info-card:hover {
-            border-color: #00ffff;
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
-        }
-
-        .info-card h3 {
-            color: #00ffff;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .info-card p {
-            color: #cccccc;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .info-card:last-child p {
-            margin-bottom: 0;
-        }
-
-        /* 頁腳 */
-        .footer {
-            background: rgba(10, 10, 10, 0.95);
-            padding: 3rem 0 1rem;
-            text-align: center;
-            border-top: 1px solid rgba(0, 255, 255, 0.3);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .footer p {
-            color: #cccccc;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-links a {
-            color: #00ffff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
-        }
-
-        /* 響應式設計 */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .about-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid,
-            .media-grid,
-            .resources-grid,
-            .partners-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-
-        /* 滾動條樣式 */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, #00ffff, #ff00ff);
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(45deg, #ff00ff, #00ffff);
-        }
-
-        /* 平滑滾動 */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* 表單狀態指示器 */
-        .form-status {
-            padding: 1rem;
-            border-radius: 10px;
-            margin-top: 1rem;
-            text-align: center;
-            display: none;
-        }
-
-        .form-status.success {
-            background: rgba(0, 255, 0, 0.2);
-            color: #00ff00;
-            border: 1px solid #00ff00;
-        }
-
-        .form-status.error {
-            background: rgba(255, 0, 0, 0.2);
-            color: #ff0000;
-            border: 1px solid #ff0000;
-        }
-
-        .form-status.loading {
-            background: rgba(255, 255, 0, 0.2);
-            color: #ffff00;
-            border: 1px solid #ffff00;
-        }
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: #0a0a0f;
+    color: #ffffff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Color Variables */
+:root {
+    /* Primary Colors */
+    --primary-bg: #0a0a0f;
+    --secondary-bg: #111118;
+    --card-bg: #1a1a24;
+    
+    /* Neon Colors */
+    --neon-blue: #00ffff;
+    --neon-purple: #8a2be2;
+    --neon-pink: #ff1493;
+    --neon-green: #00ff41;
+    --neon-orange: #ff6b35;
+    
+    /* Accent Colors */
+    --accent-blue: #0099ff;
+    --accent-purple: #6c5ce7;
+    --accent-cyan: #00cec9;
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --text-muted: #666666;
+    
+    /* Gradient */
+    --gradient-primary: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+    --gradient-secondary: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    --gradient-glow: linear-gradient(135deg, #00ffff40, #8a2be240);
+}
+
+/* Typography */
+.section-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.section-title:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px var(--neon-blue));
+}
+
+.section-subtitle {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px var(--neon-blue);
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    }
+    to {
+        text-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue);
+    }
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(10, 10, 15, 0.98);
+    border-bottom: 1px solid var(--neon-blue);
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    color: var(--neon-blue);
+    transform: scale(1.05);
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--neon-blue);
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.2rem;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 2px;
+    background: var(--neon-blue);
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center, #111118 0%, var(--primary-bg) 100%);
+}
+
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-text {
+    animation: slideInLeft 1s ease-out;
+}
+
+.hero-subtitle {
+    font-family: 'Orbitron', monospace;
+    font-size: 0.9rem;
+    color: var(--neon-blue);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.glitch {
+    position: relative;
+    overflow: hidden;
+}
+
+.glitch span {
+    position: relative;
+    z-index: 1;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.glitch::before {
+    color: var(--neon-pink);
+    animation: glitch1 2s infinite;
+}
+
+.glitch::after {
+    color: var(--neon-blue);
+    animation: glitch2 2s infinite;
+}
+
+@keyframes glitch1 {
+    0%, 90%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+}
+
+@keyframes glitch2 {
+    0%, 90%, 100% { transform: translate(0); }
+    10% { transform: translate(2px, -2px); }
+    30% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, 2px); }
+    70% { transform: translate(-2px, -2px); }
+}
+
+.hero-title {
+    font-family: 'Orbitron', monospace;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 1rem 0 2rem 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.typing-text {
+    border-right: 2px solid var(--neon-blue);
+}
+
+.cursor {
+    color: var(--neon-blue);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--neon-blue);
+    display: block;
+    text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--text-primary);
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+    filter: brightness(1.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--neon-blue);
+    border: 2px solid var(--neon-blue);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Hero Visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideInRight 1s ease-out;
+}
+
+.hologram {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hologram-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+}
+
+.hologram-layer:nth-child(1) {
+    border-color: var(--neon-blue);
+    animation-duration: 8s;
+    transform: scale(1);
+}
+
+.hologram-layer:nth-child(2) {
+    border-color: var(--neon-purple);
+    animation-duration: 10s;
+    animation-direction: reverse;
+    transform: scale(0.8);
+}
+
+.hologram-layer:nth-child(3) {
+    border-color: var(--neon-pink);
+    animation-duration: 12s;
+    transform: scale(0.6);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg) scale(var(--scale, 1)); }
+    to { transform: rotate(360deg) scale(var(--scale, 1)); }
+}
+
+.brain-icon {
+    font-size: 4rem;
+    color: var(--neon-blue);
+    z-index: 2;
+    animation: float 3s ease-in-out infinite;
+    text-shadow: 0 0 30px var(--neon-blue);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    animation: bounce 2s infinite;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 40px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.scroll-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* Sections */
+.section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.title-line {
+    width: 100px;
+    height: 3px;
+    background: var(--gradient-primary);
+    margin: 2rem auto;
+    border-radius: 2px;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-content h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--neon-blue);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateX(10px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+    margin-top: 0.2rem;
+}
+
+.feature-item h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Tech Cube */
+.about-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-cube {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotateCube 10s linear infinite;
+}
+
+.cube-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    border: 2px solid var(--neon-blue);
+    background: rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cube-face.front { transform: translateZ(100px); }
+.cube-face.back { transform: rotateY(180deg) translateZ(100px); }
+.cube-face.right { transform: rotateY(90deg) translateZ(100px); }
+.cube-face.left { transform: rotateY(-90deg) translateZ(100px); }
+.cube-face.top { transform: rotateX(90deg) translateZ(100px); }
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotateCube {
+    from { transform: rotateX(0) rotateY(0) rotateZ(0); }
+    to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+/* CEO Section */
+.ceo-section {
+    background: var(--secondary-bg);
+}
+
+.ceo-profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.ceo-image {
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.holographic-border {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: conic-gradient(from 0deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--neon-blue));
+    border-radius: 50%;
+    animation: rotateBorder 3s linear infinite;
+}
+
+@keyframes rotateBorder {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.profile-placeholder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--card-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.profile-placeholder i {
+    font-size: 6rem;
+    color: var(--neon-blue);
+}
+
+.ceo-content {
+    padding: 2rem;
+}
+
+.ceo-name {
+    font-family: 'Orbitron', monospace;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--neon-blue);
+    margin-bottom: 0.5rem;
+}
+
+.ceo-title {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+}
+
+.ceo-description p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.achievements h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+    margin-bottom: 1.5rem;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.achievement-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.achievement-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.achievement-item i {
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+    margin-top: 0.2rem;
+}
+
+.achievement-item h5 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.achievement-item p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Services Section */
+.services-section {
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.service-card:hover::before {
+    left: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+    background: linear-gradient(135deg, var(--card-bg), rgba(0, 255, 255, 0.05));
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+
+.service-card h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+    color: var(--neon-blue);
+}
+
+.service-card p {
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.service-features span {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--neon-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-features span {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: var(--neon-blue);
+}
+
+/* News Section */
+.news-section {
+    background: var(--secondary-bg);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.news-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.news-card:hover::before {
+    transform: scaleX(1);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2);
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.news-source {
+    background: var(--gradient-primary);
+    color: var(--text-primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.news-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.news-card h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.news-card:hover h3 {
+    color: var(--neon-blue);
+}
+
+.news-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.news-link:hover {
+    color: var(--neon-pink);
+    transform: translateX(5px);
+}
+
+/* Resources Section */
+.resources-section {
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.resource-card:hover::before {
+    left: 100%;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2);
+}
+
+.resource-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.resource-icon i {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.resource-content h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.resource-card:hover h3 {
+    color: var(--neon-blue);
+}
+
+.resource-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.resource-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.resource-tags span {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--neon-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover .resource-tags span {
+    background: rgba(0, 255, 255, 0.2);
+    border-color: var(--neon-blue);
+}
+
+/* Partners Section */
+.partners-section {
+    background: var(--secondary-bg);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.partner-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.partner-card:hover::before {
+    left: 100%;
+}
+
+.partner-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--neon-blue);
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.partner-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-icon i {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+.partner-card h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.partner-card:hover h3 {
+    color: var(--neon-blue);
+}
+
+.partner-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.partnership-note {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+}
+
+.partnership-note p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.contact-info h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--neon-blue);
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(0, 255, 255, 0.1);
+    transform: translateX(10px);
+    border-color: var(--neon-blue);
+    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+    margin-top: 0.2rem;
+}
+
+.contact-item h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.contact-item p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--neon-blue);
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.form-group label {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group select:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label,
+.form-group select:not([value=""]) + label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--neon-blue);
+    background: var(--card-bg);
+    padding: 0 0.5rem;
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-bg);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+    padding: 3rem 0 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.footer-logo i {
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--neon-blue);
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(4);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .ceo-profile {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(10, 10, 15, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-toggle {
+        display: flex;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
-    <!-- 粒子背景 -->
-    <div id="particles-js"></div>
-
-    <!-- 導航欄 -->
-    <nav class="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">奇華智能行銷</div>
-            <ul class="nav-links">
-                <li><a href="#home">首頁</a></li>
-                <li><a href="#about">關於我們</a></li>
-                <li><a href="#services">服務項目</a></li>
-                <li><a href="#leader">領導團隊</a></li>
-                <li><a href="#media">媒體報導</a></li>
-                <li><a href="#resources">產業資源</a></li>
-                <li><a href="#partners">戰略夥伴</a></li>
-                <li><a href="#contact">聯絡我們</a></li>
+            <div class="nav-logo">
+                <i class="fas fa-brain nav-icon"></i>
+                <span class="nav-brand">奇華智能</span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#hero" class="nav-link">首頁</a></li>
+                <li><a href="#about" class="nav-link">關於我們</a></li>
+                <li><a href="#ceo" class="nav-link">執行長</a></li>
+                <li><a href="#services" class="nav-link">核心業務</a></li>
+                <li><a href="#news" class="nav-link">媒體報導</a></li>
+                <li><a href="#resources" class="nav-link">技術資源</a></li>
+                <li><a href="#partners" class="nav-link">戰略夥伴</a></li>
+                <li><a href="#contact" class="nav-link">聯絡我們</a></li>
             </ul>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
 
-    <!-- 英雄區塊 -->
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="particles-container" id="particles"></div>
+        <div class="hero-grid"></div>
+        
         <div class="hero-content">
-            <h1>奇華智能行銷股份有限公司</h1>
-            <p>AI科技整合專家 | 智慧製造解決方案 | 國防科技合作夥伴</p>
-            <a href="#contact" class="cta-button">立即聯絡</a>
+            <div class="hero-text">
+                <div class="hero-subtitle glitch" data-text="FUTURE TECHNOLOGY">
+                    <span>FUTURE TECHNOLOGY</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </h1>
+                <p class="hero-description">
+                    領導AI科技創新革命，打造智慧未來商業生態系統
+                    <br>專精人工智慧、智慧製造、電控玻璃與國防科技整合
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">合作企業</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-label">成功專案</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="15">0</div>
+                        <div class="stat-label">技術領域</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary">
+                        <span>探索更多</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>聯絡我們</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hologram">
+                    <div class="hologram-layer"></div>
+                    <div class="hologram-layer"></div>
+                    <div class="hologram-layer"></div>
+                    <i class="fas fa-brain brain-icon"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <div class="scroll-text">向下滾動</div>
         </div>
     </section>
 
-    <!-- 關於我們 -->
-    <section id="about" class="section">
+    <!-- About Section -->
+    <section id="about" class="section about-section">
         <div class="container">
-            <h2 class="section-title">關於我們</h2>
+            <div class="section-header">
+                <h2 class="section-title glow-text">關於奇華智能</h2>
+                <div class="section-subtitle">ABOUT MOJO LIVE</div>
+                <div class="title-line"></div>
+            </div>
+            
             <div class="about-grid">
-                <div class="about-text">
-                    <p>奇華智能行銷股份有限公司（統編：95442998）是一家專注於AI技術整合與智慧製造解決方案的創新企業。我們致力於將最先進的人工智慧技術應用到傳統製造業中，協助企業實現數位轉型與智能升級。</p>
-                    <br>
-                    <p>在李孟居總經理的領導下，公司積極拓展國防科技合作、電控玻璃數位整合等前瞻性業務領域，並與多家知名企業建立戰略合作關係，共同推動產業創新發展。</p>
-                    <br>
-                    <p>我們的使命是透過AI技術的深度整合，為客戶創造更高的商業價值，建構更智慧、更高效的未來製造生態系統。</p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>引領科技創新的先驅企業</h3>
+                        <p>奇華智能行銷股份有限公司成立於2024年，是一家專注於前沿科技整合與商業應用的創新企業。我們致力於推動人工智慧、智慧製造、電控玻璃技術與國防科技的跨域整合。</p>
+                        
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <i class="fas fa-robot"></i>
+                                <div>
+                                    <h4>AI技術整合</h4>
+                                    <p>深度學習、機器學習、自然語言處理等AI技術商業化應用</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-industry"></i>
+                                <div>
+                                    <h4>智慧製造</h4>
+                                    <p>工業4.0解決方案、數位雙生技術、自動化生產系統</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <div>
+                                    <h4>國防科技</h4>
+                                    <p>無人機技術、國防工業合作、軍民兩用技術轉化</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">合作夥伴</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">專案經驗</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">技術支援</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">服務年資</div>
+                
+                <div class="about-visual">
+                    <div class="tech-cube">
+                        <div class="cube-face front">AI</div>
+                        <div class="cube-face back">IoT</div>
+                        <div class="cube-face right">5G</div>
+                        <div class="cube-face left">AR</div>
+                        <div class="cube-face top">VR</div>
+                        <div class="cube-face bottom">ML</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 服務項目 -->
-    <section id="services" class="section">
+    <!-- CEO Section -->
+    <section id="ceo" class="section ceo-section">
         <div class="container">
-            <h2 class="section-title">服務項目</h2>
+            <div class="section-header">
+                <h2 class="section-title glow-text">執行長專區</h2>
+                <div class="section-subtitle">LEADERSHIP PROFILE</div>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="ceo-profile">
+                <div class="ceo-image">
+                    <div class="image-frame">
+                        <div class="holographic-border"></div>
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ceo-content">
+                    <div class="ceo-header">
+                        <h3 class="ceo-name">李孟居</h3>
+                        <div class="ceo-title">執行長暨創辦人</div>
+                    </div>
+                    
+                    <div class="ceo-description">
+                        <p>李孟居先生是科技產業的資深領導者，擁有豐富的跨國企業管理經驗和深厚的技術背景。他致力於推動台灣科技產業的國際化發展，並在人工智慧、智慧製造、電控玻璃技術等領域建立了廣泛的合作網絡。</p>
+                    </div>
+                    
+                    <div class="achievements">
+                        <h4>核心成就</h4>
+                        <div class="achievement-grid">
+                            <div class="achievement-item">
+                                <i class="fas fa-handshake"></i>
+                                <div>
+                                    <h5>戰略合作推手</h5>
+                                    <p>成功促成碳基科技、律芯科技、振生半導體等多家企業的策略聯盟</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <h5>國際市場開拓</h5>
+                                    <p>協助電控玻璃技術進軍北美市場，建立跨國合作橋樑</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-chart-line"></i>
+                                <div>
+                                    <h5>企業健診專家</h5>
+                                    <p>提供企業轉型諮詢，協助傳統產業數位化升級</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-award"></i>
+                                <div>
+                                    <h5>創新領導者</h5>
+                                    <p>在2025台北國際航太暨國防工業展覽會中展現卓越領導力</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title glow-text">核心業務</h2>
+                <div class="section-subtitle">CORE SERVICES</div>
+                <div class="title-line"></div>
+            </div>
+            
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🤖</div>
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
                     <h3>AI技術整合</h3>
-                    <p>提供完整的人工智慧解決方案，包含機器學習、深度學習、電腦視覺等技術的企業級應用整合服務。</p>
+                    <p>提供全方位人工智慧解決方案，包括機器學習、深度學習、自然語言處理等前沿技術的商業化應用。</p>
+                    <div class="service-features">
+                        <span>生成式AI</span>
+                        <span>機器學習</span>
+                        <span>電腦視覺</span>
+                        <span>語音識別</span>
+                    </div>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">🏭</div>
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
                     <h3>智慧製造</h3>
-                    <p>協助傳統製造業導入智慧化生產系統，提升生產效率、降低成本，實現工業4.0轉型目標。</p>
+                    <p>推動工業4.0轉型，提供智慧工廠、數位雙生、自動化生產線等先進製造技術解決方案。</p>
+                    <div class="service-features">
+                        <span>數位雙生</span>
+                        <span>IIoT</span>
+                        <span>自動化</span>
+                        <span>品質控制</span>
+                    </div>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">🛡️</div>
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>電控玻璃應用</h3>
+                    <p>專精於智慧玻璃技術的商業應用，結合AI感測技術，打造未來感十足的互動空間體驗。</p>
+                    <div class="service-features">
+                        <span>智慧調光</span>
+                        <span>隱私控制</span>
+                        <span>AI整合</span>
+                        <span>節能環保</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-fighter-jet"></i>
+                    </div>
                     <h3>國防科技合作</h3>
-                    <p>與國防相關單位合作，提供軍用級AI技術解決方案，共同開發下世代國防科技應用。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>電控玻璃數位整合</h3>
-                    <p>專業的電控玻璃系統整合服務，結合IoT與AI技術，打造智慧建築解決方案。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>數據分析與決策支援</h3>
-                    <p>運用大數據分析技術，為企業提供精準的商業洞察與決策支援系統。</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>客製化系統開發</h3>
-                    <p>根據客戶特殊需求，提供量身定製的軟硬體整合解決方案與技術諮詢服務。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 領導團隊 -->
-    <section id="leader" class="section">
-        <div class="container">
-            <h2 class="section-title">領導團隊</h2>
-            <div class="leader-profile">
-                <div class="leader-info">
-                    <h3>李孟居</h3>
-                    <div class="leader-title">總經理</div>
-                    <div class="leader-description">
-                        李孟居總經理具備豐富的AI技術與產業整合經驗，專精於智慧製造、國防科技合作及電控玻璃數位整合等領域。在他的領導下，奇華智能行銷成功與多家知名企業建立戰略合作關係，並積極拓展北美市場，為公司的持續發展奠定堅實基礎。
-                    </div>
-                </div>
-                <div class="achievements">
-                    <div class="achievement">
-                        <h4>專業領域</h4>
-                        <p>AI技術整合、智慧製造、國防科技合作、電控玻璃數位整合</p>
-                    </div>
-                    <div class="achievement">
-                        <h4>產業經驗</h4>
-                        <p>超過15年的科技產業管理經驗，成功領導多項大型AI整合專案</p>
-                    </div>
-                    <div class="achievement">
-                        <h4>戰略合作</h4>
-                        <p>建立碳基科技、律芯科技、明星電控、協和門窗等重要合作夥伴關係</p>
-                    </div>
-                    <div class="achievement">
-                        <h4>市場拓展</h4>
-                        <p>積極拓展北美電控玻璃市場，為企業國際化發展開創新局面</p>
+                    <p>參與國防工業技術研發，專注於無人機、軍用AI系統等國防科技領域的創新應用。</p>
+                    <div class="service-features">
+                        <span>無人機</span>
+                        <span>軍用AI</span>
+                        <span>國防工業</span>
+                        <span>技術轉移</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 媒體報導 -->
-    <section id="media" class="section">
+    <!-- News Section -->
+    <section id="news" class="section news-section">
         <div class="container">
-            <h2 class="section-title">媒體報導</h2>
-            <div class="media-grid">
-                <div class="media-card">
-                    <div class="media-source">經濟日報</div>
-                    <h3>AI科技整合新突破 奇華智能引領產業變革</h3>
-                    <p>奇華智能行銷在李孟居總經理領導下，成功將AI技術深度整合至傳統製造業，為產業帶來革命性改變。公司專注於智慧製造解決方案，已與多家知名企業建立長期合作關係...</p>
-                    <a href="#" class="read-more">閱讀全文 →</a>
+            <div class="section-header">
+                <h2 class="section-title glow-text">媒體報導</h2>
+                <div class="section-subtitle">MEDIA COVERAGE</div>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-header">
+                        <div class="news-source">經濟日報</div>
+                        <div class="news-date">2025.09.24</div>
+                    </div>
+                    <h3>李孟居盼攜手碳基科技組無人機民防隊</h3>
+                    <p>在2025臺北國際航太暨國防工業展覽會上，奇華智能行銷總經理李孟居成功促成碳基科技與國際合作夥伴的戰略聯盟...</p>
+                    <a href="https://money.udn.com/money/story/5635/9025883" target="_blank" class="news-link">
+                        <span>閱讀全文</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                <div class="media-card">
-                    <div class="media-source">聯合新聞網</div>
-                    <h3>國防科技合作新里程碑 奇華智能展現技術實力</h3>
-                    <p>在國防科技領域，奇華智能行銷展現出卓越的技術整合能力。透過與相關單位的密切合作，公司成功開發出多項軍用級AI應用解決方案，為國家安全科技發展貢獻重要力量...</p>
-                    <a href="#" class="read-more">閱讀全文 →</a>
+                
+                <div class="news-card">
+                    <div class="news-header">
+                        <div class="news-source">聯合新聞網</div>
+                        <div class="news-date">2025.10.01</div>
+                    </div>
+                    <h3>可切換透明/霧化電控玻璃×AI互動應用</h3>
+                    <p>奇華智能行銷成功促成明星電控科技、協和鋁門窗與奇華廣告三方合作，開發創新電控玻璃AI整合應用...</p>
+                    <a href="https://money.udn.com/money/amp/story/5721/9031799" target="_blank" class="news-link">
+                        <span>閱讀全文</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                <div class="media-card">
-                    <div class="media-source">東森新聞</div>
-                    <h3>電控玻璃市場新商機 奇華智能搶攻北美市場</h3>
-                    <p>奇華智能行銷積極拓展電控玻璃數位整合業務，特別是在北美市場的佈局展現出強勁的發展潛力。結合IoT與AI技術的智慧建築解決方案，已獲得市場高度認可...</p>
-                    <a href="#" class="read-more">閱讀全文 →</a>
+                
+                <div class="news-card">
+                    <div class="news-header">
+                        <div class="news-source">東森新聞</div>
+                        <div class="news-date">2025.09.22</div>
+                    </div>
+                    <h3>奇華智能行銷助力企業突破瓶頸</h3>
+                    <p>李孟居以其卓越的企業健診服務，成功協助促成律芯科技與振生半導體的強強聯手，開啟AI與半導體領域新合作...</p>
+                    <a href="https://news.ebc.net.tw/news/living/513305" target="_blank" class="news-link">
+                        <span>閱讀全文</span>
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 產業資源 -->
-    <section id="resources" class="section">
+    <!-- Resources Section -->
+    <section id="resources" class="section resources-section">
         <div class="container">
-            <h2 class="section-title">產業資源</h2>
+            <div class="section-header">
+                <h2 class="section-title glow-text">技術資源</h2>
+                <div class="section-subtitle">TECHNICAL RESOURCES</div>
+                <div class="title-line"></div>
+            </div>
+            
             <div class="resources-grid">
                 <div class="resource-card">
-                    <div class="resource-type">技術白皮書</div>
-                    <h3>2025-2026產業技術發展白皮書</h3>
-                    <p>深度分析AI技術在智慧製造領域的最新發展趨勢，包含技術路線圖、市場預測及實施策略，為企業數位轉型提供專業指導。</p>
-                    <a href="#" class="download-link">下載白皮書 →</a>
+                    <div class="resource-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>2025-2026產業技術白皮書</h3>
+                        <p>深入分析台灣未來十年在AI、智慧製造、半導體、無人機等領域的技術趨勢與發展重點。涵蓋主權AI、生成式AI、異質整合Chiplet等前瞻技術。</p>
+                        <div class="resource-tags">
+                            <span>AI技術</span>
+                            <span>智慧製造</span>
+                            <span>半導體</span>
+                            <span>無人機</span>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="resource-card">
-                    <div class="resource-type">市場分析</div>
-                    <h3>北美電控玻璃市場趨勢分析</h3>
-                    <p>針對北美地區電控玻璃市場進行全面性分析，涵蓋市場規模、競爭態勢、技術發展及商業機會，協助企業制定進軍海外市場策略。</p>
-                    <a href="#" class="download-link">取得報告 →</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-type">技術規範</div>
-                    <h3>智慧製造系統整合標準</h3>
-                    <p>詳細說明智慧製造系統的技術規範與整合標準，包含硬體配置、軟體架構及品質管控要求，確保專案實施品質。</p>
-                    <a href="#" class="download-link">查看規範 →</a>
-                </div>
-                <div class="resource-card">
-                    <div class="resource-type">案例研究</div>
-                    <h3>AI整合成功案例集</h3>
-                    <p>收錄多個AI技術整合的成功案例，詳細介紹實施過程、技術挑戰及解決方案，為類似專案提供實務參考。</p>
-                    <a href="#" class="download-link">瀏覽案例 →</a>
+                    <div class="resource-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="resource-content">
+                        <h3>北美電控玻璃市場趨勢</h3>
+                        <p>詳細分析北美地區電控玻璃在商業辦公、飯店餐旅、醫療照護等服務業的應用場景、技術優勢與商業價值。預測2031年市場規模達170億美元。</p>
+                        <div class="resource-tags">
+                            <span>電控玻璃</span>
+                            <span>市場分析</span>
+                            <span>商業應用</span>
+                            <span>技術趨勢</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 戰略夥伴 -->
-    <section id="partners" class="section">
+    <!-- Partners Section -->
+    <section id="partners" class="section partners-section">
         <div class="container">
-            <h2 class="section-title">戰略夥伴</h2>
+            <div class="section-header">
+                <h2 class="section-title glow-text">戰略夥伴</h2>
+                <div class="section-subtitle">STRATEGIC PARTNERS</div>
+                <div class="title-line"></div>
+            </div>
+            
             <div class="partners-grid">
                 <div class="partner-card">
-                    <div class="partner-icon carbon-tech-icon">
-                        <img src="https://page.gensparksite.com/v1/base64_upload/300e940f08aab789e6cde5ac04cae363" alt="碳基科技" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    <div class="partner-icon">
+                        <i class="fas fa-plane"></i>
                     </div>
                     <h3>碳基科技</h3>
-                    <p>專業無人機系統開發商，提供軍用級無人機解決方案，在國防科技領域具備領先優勢。</p>
+                    <p>無人機技術領域合作夥伴，專精軍用無人機研發與製造，共同拓展國防科技市場。</p>
                 </div>
+                
                 <div class="partner-card">
                     <div class="partner-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <!-- IC晶片外框 -->
-                            <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" stroke-width="3" rx="5"/>
-                            <!-- 內部網格 -->
-                            <g stroke="currentColor" stroke-width="1" fill="none">
-                                <line x1="30" y1="20" x2="30" y2="80"/>
-                                <line x1="40" y1="20" x2="40" y2="80"/>
-                                <line x1="50" y1="20" x2="50" y2="80"/>
-                                <line x1="60" y1="20" x2="60" y2="80"/>
-                                <line x1="70" y1="20" x2="70" y2="80"/>
-                                <line x1="20" y1="30" x2="80" y2="30"/>
-                                <line x1="20" y1="40" x2="80" y2="40"/>
-                                <line x1="20" y1="50" x2="80" y2="50"/>
-                                <line x1="20" y1="60" x2="80" y2="60"/>
-                                <line x1="20" y1="70" x2="80" y2="70"/>
-                            </g>
-                            <!-- 核心處理單元 -->
-                            <rect x="35" y="35" width="30" height="30" fill="currentColor" opacity="0.3" rx="3"/>
-                            <!-- 連接腳 -->
-                            <g stroke="currentColor" stroke-width="2">
-                                <line x1="20" y1="35" x2="15" y2="35"/>
-                                <line x1="20" y1="45" x2="15" y2="45"/>
-                                <line x1="20" y1="55" x2="15" y2="55"/>
-                                <line x1="20" y1="65" x2="15" y2="65"/>
-                                <line x1="80" y1="35" x2="85" y2="35"/>
-                                <line x1="80" y1="45" x2="85" y2="45"/>
-                                <line x1="80" y1="55" x2="85" y2="55"/>
-                                <line x1="80" y1="65" x2="85" y2="65"/>
-                            </g>
-                        </svg>
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <h3>律芯科技</h3>
-                    <p>AI晶片設計與製造專家，專注於高效能AI處理器開發，為智慧系統提供核心運算動力。</p>
+                    <h3>律芯科技 & 振生半導體</h3>
+                    <p>AI晶片與半導體技術合作，專注於多模態AI感測模組與後量子密碼技術整合。</p>
                 </div>
+                
                 <div class="partner-card">
                     <div class="partner-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <!-- 玻璃面板 -->
-                            <rect x="20" y="25" width="60" height="40" fill="none" stroke="currentColor" stroke-width="3" rx="3"/>
-                            <!-- 電極線路 -->
-                            <g stroke="currentColor" stroke-width="2" fill="none">
-                                <line x1="25" y1="30" x2="75" y2="30"/>
-                                <line x1="25" y1="35" x2="75" y2="35"/>
-                                <line x1="25" y1="40" x2="75" y2="40"/>
-                                <line x1="25" y1="45" x2="75" y2="45"/>
-                                <line x1="25" y1="50" x2="75" y2="50"/>
-                                <line x1="25" y1="55" x2="75" y2="55"/>
-                                <line x1="25" y1="60" x2="75" y2="60"/>
-                            </g>
-                            <!-- 控制單元 -->
-                            <rect x="35" y="70" width="30" height="15" fill="currentColor" rx="2"/>
-                            <!-- 連接線 -->
-                            <line x1="50" y1="65" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
-                            <!-- 電源指示燈 -->
-                            <circle cx="45" cy="77" r="2" fill="#00ff00"/>
-                        </svg>
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <h3>明星電控</h3>
-                    <p>電控玻璃系統領導品牌，提供智慧建築玻璃解決方案，在建築自動化領域享有盛譽。</p>
+                    <h3>明星電控科技</h3>
+                    <p>電控玻璃技術合作夥伴，共同開發智慧玻璃AI整合應用解決方案。</p>
                 </div>
+                
                 <div class="partner-card">
                     <div class="partner-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                            <!-- 建築外框 -->
-                            <rect x="25" y="30" width="50" height="50" fill="none" stroke="currentColor" stroke-width="3"/>
-                            <!-- 窗框結構 -->
-                            <rect x="30" y="35" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <rect x="52" y="35" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <rect x="30" y="57" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <rect x="52" y="57" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <!-- 十字分格 -->
-                            <line x1="39" y1="35" x2="39" y2="53" stroke="currentColor" stroke-width="1"/>
-                            <line x1="30" y1="44" x2="48" y2="44" stroke="currentColor" stroke-width="1"/>
-                            <line x1="61" y1="35" x2="61" y2="53" stroke="currentColor" stroke-width="1"/>
-                            <line x1="52" y1="44" x2="70" y2="44" stroke="currentColor" stroke-width="1"/>
-                            <line x1="39" y1="57" x2="39" y2="75" stroke="currentColor" stroke-width="1"/>
-                            <line x1="30" y1="66" x2="48" y2="66" stroke="currentColor" stroke-width="1"/>
-                            <line x1="61" y1="57" x2="61" y2="75" stroke="currentColor" stroke-width="1"/>
-                            <line x1="52" y1="66" x2="70" y2="66" stroke="currentColor" stroke-width="1"/>
-                            <!-- 門 -->
-                            <rect x="40" y="60" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="56" cy="70" r="1" fill="currentColor"/>
-                        </svg>
+                        <i class="fas fa-window-maximize"></i>
                     </div>
-                    <h3>協和門窗</h3>
-                    <p>北美市場門窗系統專業供應商，提供高品質建築門窗解決方案，協助拓展海外市場。</p>
+                    <h3>協和門窗 (Tempco Glass)</h3>
+                    <p>美國門窗製造合作夥伴，協助電控玻璃技術進軍北美市場。</p>
                 </div>
+                
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>JustThings</h3>
+                    <p>AI解決方案合作夥伴，專精智慧客服、翻譯面板等AI商業應用開發。</p>
+                </div>
+            </div>
+            
+            <div class="partnership-note">
+                <p>我們與全球領先的科技企業建立深度合作關係，共同推動技術創新與市場拓展。</p>
             </div>
         </div>
     </section>
 
-    <!-- 聯絡我們 -->
-    <section id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title">聯絡我們</h2>
+            <div class="section-header">
+                <h2 class="section-title glow-text">聯絡我們</h2>
+                <div class="section-subtitle">CONTACT US</div>
+                <div class="title-line"></div>
+            </div>
+            
             <div class="contact-grid">
-                <div class="contact-form">
-                    <form id="contactForm">
+                <div class="contact-info">
+                    <h3>取得聯繫</h3>
+                    <p>歡迎與我們討論合作機會，共同探索科技創新的無限可能。</p>
+                    
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>公司地址</h4>
+                                <p>新北市板橋區民生路1段33號5樓之6</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>聯絡電話</h4>
+                                <p>03-3223777</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-id-card"></i>
+                            <div>
+                                <h4>統一編號</h4>
+                                <p>95442998</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <h4>代表人</h4>
+                                <p>李孟居</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
                         <div class="form-group">
-                            <label for="name">姓名</label>
                             <input type="text" id="name" name="name" required>
+                            <label for="name">姓名</label>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="email">電子郵件</label>
                             <input type="email" id="email" name="email" required>
+                            <label for="email">電子郵件</label>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="phone">聯絡電話</label>
                             <input type="tel" id="phone" name="phone">
+                            <label for="phone">聯絡電話</label>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="company">公司名稱</label>
-                            <input type="text" id="company" name="company">
+                            <select id="subject" name="subject" required>
+                                <option value="">請選擇諮詢類型</option>
+                                <option value="ai">AI技術整合</option>
+                                <option value="manufacturing">智慧製造</option>
+                                <option value="glass">電控玻璃應用</option>
+                                <option value="defense">國防科技合作</option>
+                                <option value="other">其他合作</option>
+                            </select>
+                            <label for="subject">諮詢類型</label>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="message">訊息內容</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">詳細需求</label>
                         </div>
-                        <button type="submit" class="submit-btn">發送訊息</button>
-                        <div id="formStatus" class="form-status"></div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>發送訊息</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
                 </div>
-                <div class="contact-info">
-                    <div class="info-card">
-                        <h3>公司資訊</h3>
-                        <p><strong>公司名稱：</strong>奇華智能行銷股份有限公司</p>
-                        <p><strong>統一編號：</strong>95442998</p>
-                        <p><strong>負責人：</strong>李孟居總經理</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>聯絡方式</h3>
-                        <p><strong>電話：</strong>03-3223777</p>
-                        <p><strong>電子郵件：</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cdbeb4a3b9ac8da6a4a0a2e3aea2a0">[email&#160;protected]</a></p>
-                        <p><strong>營業時間：</strong>週一至週五 09:00-18:00</p>
-                    </div>
-                    <div class="info-card">
-                        <h3>公司地址</h3>
-                        <p>新北市板橋區民生路1段33號5樓之6</p>
-                        <p>近板橋車站，交通便利</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- 頁腳 -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#home">首頁</a>
-                <a href="#about">關於我們</a>
-                <a href="#services">服務項目</a>
-                <a href="#contact">聯絡我們</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <span>奇華智能行銷</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#about">關於我們</a>
+                    <a href="#services">核心業務</a>
+                    <a href="#news">媒體報導</a>
+                    <a href="#contact">聯絡我們</a>
+                </div>
             </div>
-            <p>&copy; 2024 奇華智能行銷股份有限公司。保留所有權利。</p>
-            <p>統一編號：95442998 | 地址：新北市板橋區民生路1段33號5樓之6</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 奇華智能行銷股份有限公司 MoJo Live Intelligent Marketing CO., LTD. 版權所有</p>
+                <p>統一編號: 95442998 | 代表人: 李孟居</p>
+            </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // 初始化 EmailJS
-        (function() {
-            emailjs.init("YOUR_PUBLIC_KEY"); // 請替換為您的實際公鑰
-        })();
-
-        // 粒子系統配置
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 80,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#00ffff"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": false,
-                        "speed": 1,
-                        "opacity_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "size": {
-                    "value": 3,
-                    "random": true,
-                    "anim": {
-                        "enable": false,
-                        "speed": 40,
-                        "size_min": 0.1,
-                        "sync": false
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#00ffff",
-                    "opacity": 0.4,
-                    "width": 1
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                },
-                "modes": {
-                    "grab": {
-                        "distance": 400,
-                        "line_linked": {
-                            "opacity": 1
-                        }
-                    },
-                    "bubble": {
-                        "distance": 400,
-                        "size": 40,
-                        "duration": 2,
-                        "opacity": 8,
-                        "speed": 3
-                    },
-                    "repulse": {
-                        "distance": 200,
-                        "duration": 0.4
-                    },
-                    "push": {
-                        "particles_nb": 4
-                    },
-                    "remove": {
-                        "particles_nb": 2
-                    }
-                }
-            },
-            "retina_detect": true
+// AI科技感網站主要JavaScript功能
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // ==================== 導航欄功能 ====================
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // 導航欄滾動效果
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+    // 移動端導航切換
+    navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+    
+    // 導航鏈接點擊
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+            
+            // 關閉移動端菜單
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
         });
-
-        // 平滑滾動
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+    });
+    
+    // ==================== 粒子動畫背景 ====================
+    class ParticleSystem {
+        constructor(container) {
+            this.container = container;
+            this.particles = [];
+            this.particleCount = 80;
+            this.init();
+        }
+        
+        init() {
+            this.createParticles();
+            this.animate();
+        }
+        
+        createParticles() {
+            for (let i = 0; i < this.particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.cssText = `
+                    position: absolute;
+                    width: ${Math.random() * 4 + 1}px;
+                    height: ${Math.random() * 4 + 1}px;
+                    background: ${this.getRandomColor()};
+                    border-radius: 50%;
+                    pointer-events: none;
+                    opacity: ${Math.random() * 0.8 + 0.2};
+                    box-shadow: 0 0 ${Math.random() * 10 + 5}px currentColor;
+                `;
+                
+                // 隨機初始位置
+                particle.style.left = Math.random() * window.innerWidth + 'px';
+                particle.style.top = Math.random() * window.innerHeight + 'px';
+                
+                // 添加粒子運動數據
+                particle.vx = (Math.random() - 0.5) * 2;
+                particle.vy = (Math.random() - 0.5) * 2;
+                particle.life = Math.random() * 300 + 200;
+                particle.maxLife = particle.life;
+                
+                this.particles.push(particle);
+                this.container.appendChild(particle);
+            }
+        }
+        
+        getRandomColor() {
+            const colors = ['#00ffff', '#8a2be2', '#ff1493', '#00ff41', '#ff6b35'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        
+        animate() {
+            this.particles.forEach((particle, index) => {
+                // 更新位置
+                const currentX = parseFloat(particle.style.left);
+                const currentY = parseFloat(particle.style.top);
+                
+                let newX = currentX + particle.vx;
+                let newY = currentY + particle.vy;
+                
+                // 邊界碰撞檢測
+                if (newX <= 0 || newX >= window.innerWidth) {
+                    particle.vx *= -1;
+                    newX = Math.max(0, Math.min(window.innerWidth, newX));
+                }
+                if (newY <= 0 || newY >= window.innerHeight) {
+                    particle.vy *= -1;
+                    newY = Math.max(0, Math.min(window.innerHeight, newY));
+                }
+                
+                particle.style.left = newX + 'px';
+                particle.style.top = newY + 'px';
+                
+                // 更新生命週期
+                particle.life--;
+                const lifeRatio = particle.life / particle.maxLife;
+                particle.style.opacity = lifeRatio * 0.8;
+                
+                // 重生粒子
+                if (particle.life <= 0) {
+                    particle.style.left = Math.random() * window.innerWidth + 'px';
+                    particle.style.top = Math.random() * window.innerHeight + 'px';
+                    particle.life = particle.maxLife;
+                    particle.vx = (Math.random() - 0.5) * 2;
+                    particle.vy = (Math.random() - 0.5) * 2;
+                }
+            });
+            
+            requestAnimationFrame(() => this.animate());
+        }
+    }
+    
+    // 初始化粒子系統
+    const particlesContainer = document.getElementById('particles');
+    if (particlesContainer) {
+        new ParticleSystem(particlesContainer);
+    }
+    
+    // ==================== 打字效果 ====================
+    const typingText = document.getElementById('typing-text');
+    const texts = [
+        '奇華智能行銷',
+        'AI科技創新',
+        '智慧製造專家',
+        '電控玻璃整合',
+        '國防科技合作'
+    ];
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeWriter() {
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            typingText.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingText.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        
+        let typeSpeed = isDeleting ? 100 : 200;
+        
+        if (!isDeleting && charIndex === currentText.length) {
+            typeSpeed = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            typeSpeed = 500;
+        }
+        
+        setTimeout(typeWriter, typeSpeed);
+    }
+    
+    if (typingText) {
+        setTimeout(typeWriter, 1000);
+    }
+    
+    // ==================== 數字動畫 ====================
+    function animateNumbers() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.count);
+                    animateValue(entry.target, 0, target, 2000);
+                    observer.unobserve(entry.target);
                 }
             });
         });
-
-        // 聯絡表單處理
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        
+        statNumbers.forEach(num => observer.observe(num));
+    }
+    
+    function animateValue(element, start, end, duration) {
+        let startTimestamp = null;
+        
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const currentValue = Math.floor(progress * (end - start) + start);
+            element.textContent = currentValue;
             
-            const statusDiv = document.getElementById('formStatus');
-            const submitBtn = document.querySelector('.submit-btn');
-            const originalBtnText = submitBtn.textContent;
-            
-            // 顯示發送中狀態
-            statusDiv.className = 'form-status loading';
-            statusDiv.style.display = 'block';
-            statusDiv.textContent = '正在發送訊息...';
-            submitBtn.textContent = '發送中...';
-            submitBtn.disabled = true;
-            
-            // 收集表單數據
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                company: document.getElementById('company').value,
-                message: document.getElementById('message').value,
-                to_email: 'synta@kimo.com'
-            };
-            
-            // 發送郵件給公司
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
-                .then(function(response) {
-                    console.log('郵件發送成功!', response.status, response.text);
-                    
-                    // 發送自動回覆給客戶
-                    const autoReplyData = {
-                        to_name: formData.name,
-                        to_email: formData.email,
-                        company_name: '奇華智能行銷股份有限公司'
-                    };
-                    
-                    return emailjs.send('YOUR_SERVICE_ID', 'YOUR_AUTO_REPLY_TEMPLATE_ID', autoReplyData);
-                })
-                .then(function(response) {
-                    console.log('自動回覆發送成功!', response.status, response.text);
-                    
-                    // 顯示成功訊息
-                    statusDiv.className = 'form-status success';
-                    statusDiv.textContent = '訊息發送成功！我們將盡快與您聯繫。';
-                    
-                    // 重置表單
-                    document.getElementById('contactForm').reset();
-                })
-                .catch(function(error) {
-                    console.error('郵件發送失敗:', error);
-                    
-                    // 顯示錯誤訊息
-                    statusDiv.className = 'form-status error';
-                    statusDiv.textContent = '訊息發送失敗，請稍後再試或直接撥打電話聯繫我們。';
-                })
-                .finally(function() {
-                    // 恢復按鈕狀態
-                    submitBtn.textContent = originalBtnText;
-                    submitBtn.disabled = false;
-                    
-                    // 3秒後隱藏狀態訊息
-                    setTimeout(function() {
-                        statusDiv.style.display = 'none';
-                    }, 5000);
-                });
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        
+        window.requestAnimationFrame(step);
+    }
+    
+    animateNumbers();
+    
+    // ==================== 滾動動畫 ====================
+    function initScrollAnimations() {
+        const animatedElements = document.querySelectorAll('section, .service-card, .news-card, .partner-card, .achievement-item, .feature-item');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         });
-
-        // 導航欄滾動效果
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        
+        animatedElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            observer.observe(el);
+        });
+    }
+    
+    initScrollAnimations();
+    
+    // ==================== 表單功能 ====================
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        // 表單動畫效果
+        const formGroups = document.querySelectorAll('.form-group');
+        formGroups.forEach(group => {
+            const input = group.querySelector('input, textarea, select');
+            const label = group.querySelector('label');
+            
+            if (input && label) {
+                input.addEventListener('focus', () => {
+                    group.classList.add('focused');
+                });
+                
+                input.addEventListener('blur', () => {
+                    if (!input.value) {
+                        group.classList.remove('focused');
+                    }
+                });
+                
+                input.addEventListener('input', () => {
+                    if (input.value) {
+                        group.classList.add('has-value');
+                    } else {
+                        group.classList.remove('has-value');
+                    }
+                });
             }
         });
-
-        // 頁面載入動畫
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease-in-out';
+        
+        // 表單提交
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            setTimeout(function() {
-                document.body.style.opacity = '1';
-            }, 100);
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // 顯示提交動畫
+            showNotification('正在發送訊息...', 'info');
+            
+            // 模擬表單提交
+            setTimeout(() => {
+                showNotification('訊息已成功發送！我們將盡快與您聯繫。', 'success');
+                contactForm.reset();
+                
+                // 重置表單狀態
+                formGroups.forEach(group => {
+                    group.classList.remove('focused', 'has-value');
+                });
+            }, 2000);
         });
+    }
+    
+    // ==================== 通知系統 ====================
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-triangle' : 'info-circle'}"></i>
+            <span>${message}</span>
+            <button class="notification-close">×</button>
+        `;
+        
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'success' ? '#00ff41' : type === 'error' ? '#ff1493' : '#00ffff'};
+            color: #0a0a0f;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 10000;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        `;
+        
+        document.body.appendChild(notification);
+        
+        // 動畫進入
+        setTimeout(() => {
+            notification.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // 關閉按鈕
+        const closeBtn = notification.querySelector('.notification-close');
+        closeBtn.style.cssText = `
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: inherit;
+            margin-left: 0.5rem;
+        `;
+        
+        closeBtn.addEventListener('click', () => {
+            removeNotification(notification);
+        });
+        
+        // 自動關閉
+        setTimeout(() => {
+            removeNotification(notification);
+        }, 5000);
+    }
+    
+    function removeNotification(notification) {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 300);
+    }
+    
+    // ==================== 鼠標互動效果 ====================
+    function initMouseEffects() {
+        const interactiveElements = document.querySelectorAll('.service-card, .news-card, .partner-card, .btn, .nav-link');
+        
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', function(e) {
+                createMouseEffect(e.clientX, e.clientY);
+            });
+        });
+        
+        // 鼠標跟隨效果
+        let mouseX = 0;
+        let mouseY = 0;
+        let cursorX = 0;
+        let cursorY = 0;
+        
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+        
+        // 創建自定義光標
+        const cursor = document.createElement('div');
+        cursor.style.cssText = `
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, rgba(0,255,255,0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: screen;
+            transition: transform 0.1s ease;
+        `;
+        document.body.appendChild(cursor);
+        
+        function updateCursor() {
+            cursorX += (mouseX - cursorX) * 0.1;
+            cursorY += (mouseY - cursorY) * 0.1;
+            
+            cursor.style.left = cursorX - 10 + 'px';
+            cursor.style.top = cursorY - 10 + 'px';
+            
+            requestAnimationFrame(updateCursor);
+        }
+        updateCursor();
+    }
+    
+    function createMouseEffect(x, y) {
+        const effect = document.createElement('div');
+        effect.style.cssText = `
+            position: fixed;
+            left: ${x}px;
+            top: ${y}px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ffff;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            animation: ripple 0.8s ease-out forwards;
+        `;
+        
+        document.body.appendChild(effect);
+        
+        setTimeout(() => {
+            document.body.removeChild(effect);
+        }, 800);
+    }
+    
+    initMouseEffects();
+    
+    // ==================== 3D 傾斜效果 ====================
+    function init3DTilt() {
+        const tiltElements = document.querySelectorAll('.service-card, .news-card, .partner-card');
+        
+        tiltElements.forEach(element => {
+            element.addEventListener('mousemove', function(e) {
+                const rect = element.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / centerY * 10;
+                const rotateY = (centerX - x) / centerX * 10;
+                
+                element.style.transform = `
+                    perspective(1000px) 
+                    rotateX(${rotateX}deg) 
+                    rotateY(${rotateY}deg) 
+                    translateY(-10px)
+                `;
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                element.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+            });
+        });
+    }
+    
+    init3DTilt();
+    
+    // ==================== 主題色彩切換效果 ====================
+    function initColorEffects() {
+        const colorElements = document.querySelectorAll('.section-title, .glow-text, h3');
+        
+        setInterval(() => {
+            colorElements.forEach(element => {
+                if (Math.random() > 0.95) { // 5% 機率觸發
+                    const originalColor = element.style.color;
+                    element.style.color = '#ff1493'; // 短暫變成粉紅色
+                    
+                    setTimeout(() => {
+                        element.style.color = originalColor;
+                    }, 200);
+                }
+            });
+        }, 1000);
+    }
+    
+    initColorEffects();
+    
+    // ==================== 響應式處理 ====================
+    function handleResize() {
+        // 重新計算粒子位置
+        if (window.innerWidth <= 768) {
+            // 移動端優化
+            document.querySelectorAll('.particle').forEach(particle => {
+                particle.style.display = Math.random() > 0.5 ? 'block' : 'none';
+            });
+        } else {
+            // 桌面端顯示所有粒子
+            document.querySelectorAll('.particle').forEach(particle => {
+                particle.style.display = 'block';
+            });
+        }
+    }
+    
+    window.addEventListener('resize', handleResize);
+    handleResize(); // 初始調用
+    
+    // ==================== 性能優化 ====================
+    // 節流函數
+    function throttle(func, limit) {
+        let inThrottle;
+        return function() {
+            const args = arguments;
+            const context = this;
+            if (!inThrottle) {
+                func.apply(context, args);
+                inThrottle = true;
+                setTimeout(() => inThrottle = false, limit);
+            }
+        };
+    }
+    
+    // 優化滾動事件
+    const optimizedScrollHandler = throttle(() => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }, 16);
+    
+    window.addEventListener('scroll', optimizedScrollHandler);
+    
+    // ==================== 載入完成效果 ====================
+    window.addEventListener('load', function() {
+        document.body.style.opacity = '1';
+        
+        // 添加載入完成的特效
+        setTimeout(() => {
+            showNotification('歡迎來到奇華智能行銷！', 'success');
+        }, 1000);
+    });
+    
+    // 預載入樣式
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    console.log('🚀 奇華智能行銷 AI科技感網站載入完成！');
+});
     </script>
 </body>
 </html>
