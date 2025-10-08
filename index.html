@@ -1,645 +1,1110 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Ads G2 驗證代辦 - 知行跨媒體廣告行銷</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#165DFF',
-                        secondary: '#FF7D00',
-                        dark: '#1D2939',
-                        light: '#F9FAFB',
-                        muted: '#667085'
-                    },
-                    fontFamily: {
-                        sans: ['Noto Sans TC', 'sans-serif']
-                    }
-                }
+    <title>奇華智能行銷股份有限公司 - AI科技整合專家</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 粒子背景容器 */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* 導航欄 */
+        .navbar {
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.8);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* 英雄區塊 */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 30px rgba(0, 255, 255, 0.5); }
+            to { text-shadow: 0 0 40px rgba(0, 255, 255, 0.8), 0 0 50px rgba(255, 0, 255, 0.3); }
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #cccccc;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* 區塊樣式 */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* 關於我們區塊 */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #cccccc;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ffff;
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00ffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #cccccc;
+            font-size: 1.1rem;
+        }
+
+        /* 服務區塊 */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            border-color: #00ffff;
+            box-shadow: 0 25px 50px rgba(0, 255, 255, 0.3);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00ffff, #ff00ff);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #00ffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* 領導團隊區塊 */
+        .leader-profile {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .leader-profile:hover {
+            border-color: #00ffff;
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .leader-info h3 {
+            font-size: 2rem;
+            color: #00ffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-title {
+            font-size: 1.2rem;
+            color: #ff00ff;
+            margin-bottom: 1.5rem;
+        }
+
+        .leader-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 2rem;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .achievement {
+            background: rgba(0, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #00ffff;
+        }
+
+        .achievement h4 {
+            color: #00ffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement p {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        /* 媒體報導區塊 */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .media-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .media-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ffff;
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .media-source {
+            color: #ff00ff;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .media-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .media-card p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more {
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+        }
+
+        /* 產業資源區塊 */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ffff;
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .resource-type {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .resource-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .resource-card p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .download-link {
+            color: #00ffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .download-link:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+        }
+
+        /* 戰略夥伴區塊 */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .partner-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-10px);
+            border-color: #00ffff;
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .partner-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: rgba(0, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #00ffff;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .partner-icon.carbon-tech-icon {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .partner-card:hover .partner-icon {
+            background: rgba(0, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .partner-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: #00ffff;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover .partner-icon svg {
+            fill: #ffffff;
+        }
+
+        .partner-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .partner-card p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* 聯絡我們區塊 */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 10px;
+            color: #ffffff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover {
+            border-color: #00ffff;
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+        }
+
+        .info-card h3 {
+            color: #00ffff;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .info-card p {
+            color: #cccccc;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .info-card:last-child p {
+            margin-bottom: 0;
+        }
+
+        /* 頁腳 */
+        .footer {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 3rem 0 1rem;
+            text-align: center;
+            border-top: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            color: #cccccc;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: #00ffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 5px rgba(255, 0, 255, 0.5);
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .media-grid,
+            .resources-grid,
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .card-hover {
-                transition: all 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-5px);
-            }
+
+        /* 滾動條樣式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+        }
+
+        /* 平滑滾動 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 表單狀態指示器 */
+        .form-status {
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+        }
+
+        .form-status.success {
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            border: 1px solid #00ff00;
+        }
+
+        .form-status.error {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff0000;
+            border: 1px solid #ff0000;
+        }
+
+        .form-status.loading {
+            background: rgba(255, 255, 0, 0.2);
+            color: #ffff00;
+            border: 1px solid #ffff00;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans bg-gray-50 text-dark">
-    <!-- 導航欄 -->
-    <header id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                    <i class="fa fa-line-chart text-white text-xl"></i>
-                </div>
-                <span class="text-lg md:text-xl font-bold text-primary">知行跨媒體</span>
-            </a>
-            
-            <!-- 桌面端菜單 -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="text-dark hover:text-primary transition-colors">服務項目</a>
-                <a href="#examples" class="text-dark hover:text-primary transition-colors">成功案例</a>
-                <a href="#form" class="text-dark hover:text-primary transition-colors">免費諮詢</a>
-                <a href="#health-check" class="text-dark hover:text-primary transition-colors">網站健檢</a>
-                <a href="https://line.me/ti/p/@271utguf" target="_blank" class="bg-secondary hover:bg-secondary/90 text-white px-5 py-2 rounded-full transition-all shadow-md hover:shadow-lg">
-                    立即諮詢
-                </a>
-            </nav>
-            
-            <!-- 手機端菜單按鈕 -->
-            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
-                <i class="fa fa-bars text-2xl"></i>
-            </button>
-        </div>
-        
-        <!-- 手機端菜單 -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
-            <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
-                <a href="#services" class="text-dark hover:text-primary transition-colors py-2">服務項目</a>
-                <a href="#examples" class="text-dark hover:text-primary transition-colors py-2">成功案例</a>
-                <a href="#form" class="text-dark hover:text-primary transition-colors py-2">免費諮詢</a>
-                <a href="#health-check" class="text-dark hover:text-primary transition-colors py-2">網站健檢</a>
-                <a href="https://line.me/ti/p/@271utguf" target="_blank" class="bg-secondary hover:bg-secondary/90 text-white px-5 py-3 rounded-full text-center transition-all shadow-md">
-                    立即諮詢
-                </a>
-            </div>
-        </div>
-    </header>
+<body>
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
 
-    <!-- 英雄區 -->
-    <section class="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-10 md:mb-0">
-                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-4">
-                        <span class="text-primary">Google Ads G2 驗證代辦</span>
-                    </h1>
-                    <p class="text-[clamp(1.2rem,2vw,1.5rem)] text-muted mb-8 font-medium">
-                        快速、安全、零失誤
-                    </p>
-                    <p class="text-lg text-dark/80 mb-8 max-w-lg">
-                        專業團隊協助您完成各平台驗證，從Google Ads G2到各種跨境購物網站架設，提供一站式行銷解決方案，讓您的業務快速拓展。
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://line.me/ti/p/@271utguf" target="_blank" class="bg-secondary hover:bg-secondary/90 text-white text-center px-8 py-4 rounded-full text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
-                            <i class="fa fa-comment mr-2"></i>立即諮詢
-                        </a>
-                        <a href="#services" class="bg-white hover:bg-gray-50 text-primary border border-primary text-center px-8 py-4 rounded-full text-lg font-medium transition-all shadow-md hover:shadow-lg">
-                            了解更多服務
-                        </a>
-                    </div>
-                    
-                    <div class="mt-10 flex items-center space-x-6">
-                        <div class="flex -space-x-2">
-                            <img src="https://picsum.photos/seed/client1/100" alt="客戶頭像" class="w-10 h-10 rounded-full border-2 border-white">
-                            <img src="https://picsum.photos/seed/client2/100" alt="客戶頭像" class="w-10 h-10 rounded-full border-2 border-white">
-                            <img src="https://picsum.photos/seed/client3/100" alt="客戶頭像" class="w-10 h-10 rounded-full border-2 border-white">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 text-primary border-2 border-white flex items-center justify-center text-xs font-bold">
-                                99+
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex items-center text-yellow-400 mb-1">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <span class="ml-2 text-dark font-medium">4.9/5</span>
-                            </div>
-                            <p class="text-sm text-muted">來自超過200位客戶的好評</p>
-                        </div>
-                    </div>
+    <!-- 導航欄 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">奇華智能行銷</div>
+            <ul class="nav-links">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#leader">領導團隊</a></li>
+                <li><a href="#media">媒體報導</a></li>
+                <li><a href="#resources">產業資源</a></li>
+                <li><a href="#partners">戰略夥伴</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄區塊 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>奇華智能行銷股份有限公司</h1>
+            <p>AI科技整合專家 | 智慧製造解決方案 | 國防科技合作夥伴</p>
+            <a href="#contact" class="cta-button">立即聯絡</a>
+        </div>
+    </section>
+
+    <!-- 關於我們 -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">關於我們</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>奇華智能行銷股份有限公司（統編：95442998）是一家專注於AI技術整合與智慧製造解決方案的創新企業。我們致力於將最先進的人工智慧技術應用到傳統製造業中，協助企業實現數位轉型與智能升級。</p>
+                    <br>
+                    <p>在李孟居總經理的領導下，公司積極拓展國防科技合作、電控玻璃數位整合等前瞻性業務領域，並與多家知名企業建立戰略合作關係，共同推動產業創新發展。</p>
+                    <br>
+                    <p>我們的使命是透過AI技術的深度整合，為客戶創造更高的商業價值，建構更智慧、更高效的未來製造生態系統。</p>
                 </div>
-                
-                <div class="md:w-1/2 relative">
-                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform md:rotate-2 transition-transform hover:rotate-0 duration-500">
-                        <img src="https://picsum.photos/seed/googleads/800/600" alt="Google Ads G2 驗證代辦服務" class="w-full h-auto">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                            <p class="text-white font-medium">已協助超過500家企業完成驗證</p>
-                        </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">合作夥伴</div>
                     </div>
-                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
-                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+                    <div class="stat-card">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">專案經驗</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">技術支援</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">服務年資</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 服務項目 -->
-    <section id="services" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">我們的全方位服務</h2>
-                <p class="text-muted text-lg max-w-2xl mx-auto">提供從平台驗證、網站架設到行銷推廣的一站式解決方案，讓您的業務無後顧之憂</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- 服務卡片1 -->
-                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-google text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Google Ads G2 驗證</h3>
-                    <p class="text-muted mb-4">專業團隊代辦Google Ads G2驗證，熟悉審核標準，確保一次通過，節省您的寶貴時間。</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">資料準備指導</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">全程代辦服務</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">審核快速通過</span>
-                        </li>
-                    </ul>
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">服務項目</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🤖</div>
+                    <h3>AI技術整合</h3>
+                    <p>提供完整的人工智慧解決方案，包含機器學習、深度學習、電腦視覺等技術的企業級應用整合服務。</p>
                 </div>
-                
-                <!-- 服務卡片2 -->
-                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-shopping-cart text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">跨境購物網站架設</h3>
-                    <p class="text-muted mb-4">專精於Wix、WordPress等平台，打造符合跨境電商需求的購物網站，支援多語言與多貨幣。</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">Wix/WordPress架設</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">支付系統整合</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">多語言支援</span>
-                        </li>
-                    </ul>
+                <div class="service-card">
+                    <div class="service-icon">🏭</div>
+                    <h3>智慧製造</h3>
+                    <p>協助傳統製造業導入智慧化生產系統，提升生產效率、降低成本，實現工業4.0轉型目標。</p>
                 </div>
-                
-                <!-- 服務卡片3 -->
-                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-bullhorn text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">廣告行銷代操</h3>
-                    <p class="text-muted mb-4">專業團隊代為操作FB、IG、LINE、Google等平台廣告，精準投放，提高轉換率，降低行銷成本。</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">多平台廣告投放</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">數據分析優化</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">ROI最大化策略</span>
-                        </li>
-                    </ul>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>國防科技合作</h3>
+                    <p>與國防相關單位合作，提供軍用級AI技術解決方案，共同開發下世代國防科技應用。</p>
                 </div>
-                
-                <!-- 服務卡片4 -->
-                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-search text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">SEO 關鍵詞優化</h3>
-                    <p class="text-muted mb-4">透過專業SEO技術，提升網站在搜尋引擎的排名，增加自然流量，提高品牌曝光度。</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">關鍵詞研究分析</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">網站內容優化</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">排名追蹤與報告</span>
-                        </li>
-                    </ul>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>電控玻璃數位整合</h3>
+                    <p>專業的電控玻璃系統整合服務，結合IoT與AI技術，打造智慧建築解決方案。</p>
                 </div>
-                
-                <!-- 服務卡片5 -->
-                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-paint-brush text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">設計服務</h3>
-                    <p class="text-muted mb-4">提供LOGO商標、菜單、手提袋等設計服務，打造獨特品牌形象，提升品牌價值。</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">品牌識別設計</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">行銷物料設計</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">包裝設計</span>
-                        </li>
-                    </ul>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>數據分析與決策支援</h3>
+                    <p>運用大數據分析技術，為企業提供精準的商業洞察與決策支援系統。</p>
                 </div>
-                
-                <!-- 服務卡片6 -->
-                <div class="bg-white rounded-xl shadow-md p-8 card-hover border border-gray-100">
-                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fa fa-file-text text-primary text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">文案與翻譯</h3>
-                    <p class="text-muted mb-4">提供企劃書撰寫、多語言翻譯服務，協助您順利拓展國際市場，與客戶順利溝通。</p>
-                    <ul class="space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">商業企劃書撰寫</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">專業文件翻譯</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-check text-green-500 mt-1 mr-2"></i>
-                            <span class="text-dark/80">行銷文案創作</span>
-                        </li>
-                    </ul>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>客製化系統開發</h3>
+                    <p>根據客戶特殊需求，提供量身定製的軟硬體整合解決方案與技術諮詢服務。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 成功案例 -->
-    <section id="examples" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">成功案例與廣告範例</h2>
-                <p class="text-muted text-lg max-w-2xl mx-auto">我們協助眾多客戶成功完成各項驗證與行銷計劃，以下是部分案例展示</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <!-- 案例1 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="h-60 overflow-hidden">
-                        <img src="https://picsum.photos/seed/case1/800/600" alt="Google Ads G2 驗證成功案例" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="text-xl font-bold">電商平台 Google Ads G2 驗證</h3>
-                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">成功案例</span>
-                        </div>
-                        <p class="text-muted mb-4">協助某跨境電商平台順利通過Google Ads G2驗證，廣告投放後銷售額提升230%。</p>
-                        <div class="flex items-center text-sm text-muted">
-                            <span class="flex items-center mr-4"><i class="fa fa-calendar mr-1"></i> 2023年5月</span>
-                            <span class="flex items-center"><i class="fa fa-tags mr-1"></i> Google Ads, 電商</span>
-                        </div>
+    <!-- 領導團隊 -->
+    <section id="leader" class="section">
+        <div class="container">
+            <h2 class="section-title">領導團隊</h2>
+            <div class="leader-profile">
+                <div class="leader-info">
+                    <h3>李孟居</h3>
+                    <div class="leader-title">總經理</div>
+                    <div class="leader-description">
+                        李孟居總經理具備豐富的AI技術與產業整合經驗，專精於智慧製造、國防科技合作及電控玻璃數位整合等領域。在他的領導下，奇華智能行銷成功與多家知名企業建立戰略合作關係，並積極拓展北美市場，為公司的持續發展奠定堅實基礎。
                     </div>
                 </div>
-                
-                <!-- 案例2 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                    <div class="h-60 overflow-hidden">
-                        <img src="https://picsum.photos/seed/case2/800/600" alt="跨境購物網站架設案例" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                <div class="achievements">
+                    <div class="achievement">
+                        <h4>專業領域</h4>
+                        <p>AI技術整合、智慧製造、國防科技合作、電控玻璃數位整合</p>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-center mb-3">
-                            <h3 class="text-xl font-bold">時尚品牌跨境購物網站</h3>
-                            <span class="bg-green-100 text-green-800 text-sm font-medium px-3 py-1 rounded-full">成功案例</span>
-                        </div>
-                        <p class="text-muted mb-4">使用WordPress為時尚品牌打造跨境購物網站，支援6種語言，3個月內國際訂單成長180%。</p>
-                        <div class="flex items-center text-sm text-muted">
-                            <span class="flex items-center mr-4"><i class="fa fa-calendar mr-1"></i> 2023年3月</span>
-                            <span class="flex items-center"><i class="fa fa-tags mr-1"></i> 網站架設, 跨境電商</span>
-                        </div>
+                    <div class="achievement">
+                        <h4>產業經驗</h4>
+                        <p>超過15年的科技產業管理經驗，成功領導多項大型AI整合專案</p>
                     </div>
-                </div>
-            </div>
-            
-            <!-- 廣告範例 -->
-            <h3 class="text-2xl font-bold mb-8 text-center">廣告附加資訊範例</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- 廣告範例1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <div class="flex items-center mb-4">
-                        <i class="fa fa-google text-2xl text-primary mr-3"></i>
-                        <h4 class="font-bold text-lg">Google Ads 範例</h4>
+                    <div class="achievement">
+                        <h4>戰略合作</h4>
+                        <p>建立碳基科技、律芯科技、明星電控、協和門窗等重要合作夥伴關係</p>
                     </div>
-                    <p class="text-dark/80 mb-3"><strong>標題:</strong> 專業Google Ads G2驗證代辦服務</p>
-                    <p class="text-dark/80 mb-3"><strong>描述:</strong> 快速通過驗證，專業團隊代辦，零失敗案例，立即諮詢享優惠。</p>
-                </div>
-                
-                <!-- 廣告範例2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <div class="flex items-center mb-4">
-                        <i class="fa fa-facebook text-2xl text-[#1877F2] mr-3"></i>
-                        <h4 class="font-bold text-lg">Facebook 廣告範例</h4>
-                    </div>
-                    <p class="text-dark/80 mb-3"><strong>標題:</strong> 跨境電商網站架設 + 行銷推廣</p>
-                    <p class="text-dark/80 mb-3"><strong>描述:</strong> 一站式服務，從網站建立到客戶轉換，讓業務輕鬆拓展全球。</p>
-                </div>
-                
-                <!-- 廣告範例3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <div class="flex items-center mb-4">
-                        <i class="fa fa-line text-2xl text-[#00C300] mr-3"></i>
-                        <h4 class="font-bold text-lg">LINE 廣告範例</h4>
-                    </div>
-                    <p class="text-dark/80 mb-3"><strong>標題:</strong> 網站SEO優化服務</p>
-                    <p class="text-dark/80 mb-3"><strong>描述:</strong> 提升搜尋排名，增加自然流量，按月收費，效果保證。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 為什麼選擇我們 -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-6">為什麼選擇我們的服務</h2>
-                    <p class="text-muted text-lg mb-8">我們擁有多年行業經驗，熟悉各平台規則與行銷技巧，為客戶提供高品質服務</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fa fa-check-circle text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">專業團隊</h3>
-                                <p class="text-muted">團隊成員皆具備相關認證與豐富經驗，熟悉各平台操作與審核標準。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fa fa-bolt text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">高效服務</h3>
-                                <p class="text-muted">快速回應客戶需求，縮短驗證與架設時間，讓您儘早展開業務。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fa fa-shield text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">安全保障</h3>
-                                <p class="text-muted">嚴格保密客戶資料，確保所有操作符合平台規範，避免帳號風險。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fa fa-life-ring text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-2">全程支援</h3>
-                                <p class="text-muted">提供售後服務與技術支援，隨時解決客戶問題，確保業務順利運行。</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2 relative">
-                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                        <img src="https://picsum.photos/seed/team/800/600" alt="我們的專業團隊" class="w-full h-auto">
-                    </div>
-                    <div class="absolute -z-10 top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                    <div class="absolute -z-10 -bottom-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
-                    
-                    <!-- 數據統計 -->
-                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                                <i class="fa fa-trophy text-primary text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg">服務成果</h4>
-                                <p class="text-sm text-muted">客戶滿意度與成果</p>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="text-center">
-                                <p class="text-3xl font-bold text-primary">98%</p>
-                                <p class="text-sm text-muted">驗證通過率</p>
-                            </div>
-                            <div class="text-center">
-                                <p class="text-3xl font-bold text-primary">500+</p>
-                                <p class="text-sm text-muted">成功案例</p>
-                            </div>
-                        </div>
+                    <div class="achievement">
+                        <h4>市場拓展</h4>
+                        <p>積極拓展北美電控玻璃市場，為企業國際化發展開創新局面</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 網站免費健檢 -->
-    <section id="health-check" class="py-20 bg-gradient-to-br from-primary/5 to-primary/10">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 p-8 md:p-12 bg-primary text-white">
-                        <h2 class="text-2xl md:text-3xl font-bold mb-4">網站免費健檢</h2>
-                        <p class="mb-6 opacity-90">我們提供專業的網站健檢服務，分析您的網站表現，找出問題並提供改進建議，提升網站效能與轉換率。</p>
-                        
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start">
-                                <i class="fa fa-check-circle mt-1 mr-3"></i>
-                                <span>SEO表現分析</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fa fa-check-circle mt-1 mr-3"></i>
-                                <span>行動裝置相容性檢查</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fa fa-check-circle mt-1 mr-3"></i>
-                                <span>網站速度與效能評估</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fa fa-check-circle mt-1 mr-3"></i>
-                                <span>使用者體驗分析</span>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fa fa-check-circle mt-1 mr-3"></i>
-                                <span>完整改進建議報告</span>
-                            </div>
-                        </div>
-                        
-                        <a href="#form" class="inline-block bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-full font-medium transition-colors">
-                            立即申請健檢
-                        </a>
-                    </div>
-                    
-                    <div class="md:w-1/2 p-8 md:p-12">
-                        <h3 class="text-xl font-bold mb-6">健檢流程</h3>
-                        
-                        <div class="space-y-8">
-                            <div class="flex">
-                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">1</div>
-                                <div class="ml-4">
-                                    <h4 class="font-bold mb-2">提交健檢申請</h4>
-                                    <p class="text-muted">填寫表單提供您的網站資訊與聯絡方式</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex">
-                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">2</div>
-                                <div class="ml-4">
-                                    <h4 class="font-bold mb-2">專業分析評估</h4>
-                                    <p class="text-muted">我們的專業團隊將對您的網站進行全面分析</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex">
-                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">3</div>
-                                <div class="ml-4">
-                                    <h4 class="font-bold mb-2">收到健檢報告</h4>
-                                    <p class="text-muted">在3個工作日內收到詳細的健檢報告與建議</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex">
-                                <div class="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold flex-shrink-0 mt-1">4</div>
-                                <div class="ml-4">
-                                    <h4 class="font-bold mb-2">免費諮詢說明</h4>
-                                    <p class="text-muted">我們將與您聯繫，解釋報告內容並提供改進方案</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- 媒體報導 -->
+    <section id="media" class="section">
+        <div class="container">
+            <h2 class="section-title">媒體報導</h2>
+            <div class="media-grid">
+                <div class="media-card">
+                    <div class="media-source">經濟日報</div>
+                    <h3>AI科技整合新突破 奇華智能引領產業變革</h3>
+                    <p>奇華智能行銷在李孟居總經理領導下，成功將AI技術深度整合至傳統製造業，為產業帶來革命性改變。公司專注於智慧製造解決方案，已與多家知名企業建立長期合作關係...</p>
+                    <a href="#" class="read-more">閱讀全文 →</a>
+                </div>
+                <div class="media-card">
+                    <div class="media-source">聯合新聞網</div>
+                    <h3>國防科技合作新里程碑 奇華智能展現技術實力</h3>
+                    <p>在國防科技領域，奇華智能行銷展現出卓越的技術整合能力。透過與相關單位的密切合作，公司成功開發出多項軍用級AI應用解決方案，為國家安全科技發展貢獻重要力量...</p>
+                    <a href="#" class="read-more">閱讀全文 →</a>
+                </div>
+                <div class="media-card">
+                    <div class="media-source">東森新聞</div>
+                    <h3>電控玻璃市場新商機 奇華智能搶攻北美市場</h3>
+                    <p>奇華智能行銷積極拓展電控玻璃數位整合業務，特別是在北美市場的佈局展現出強勁的發展潛力。結合IoT與AI技術的智慧建築解決方案，已獲得市場高度認可...</p>
+                    <a href="#" class="read-more">閱讀全文 →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 聯絡諮詢表單 -->
-    <section id="form" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold mb-4">聯絡我們</h2>
-                <p class="text-muted text-lg max-w-2xl mx-auto">填寫以下表單，我們的專業顧問將儘快與您聯繫，為您提供詳細的服務說明與報價</p>
+    <!-- 產業資源 -->
+    <section id="resources" class="section">
+        <div class="container">
+            <h2 class="section-title">產業資源</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-type">技術白皮書</div>
+                    <h3>2025-2026產業技術發展白皮書</h3>
+                    <p>深度分析AI技術在智慧製造領域的最新發展趨勢，包含技術路線圖、市場預測及實施策略，為企業數位轉型提供專業指導。</p>
+                    <a href="#" class="download-link">下載白皮書 →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">市場分析</div>
+                    <h3>北美電控玻璃市場趨勢分析</h3>
+                    <p>針對北美地區電控玻璃市場進行全面性分析，涵蓋市場規模、競爭態勢、技術發展及商業機會，協助企業制定進軍海外市場策略。</p>
+                    <a href="#" class="download-link">取得報告 →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">技術規範</div>
+                    <h3>智慧製造系統整合標準</h3>
+                    <p>詳細說明智慧製造系統的技術規範與整合標準，包含硬體配置、軟體架構及品質管控要求，確保專案實施品質。</p>
+                    <a href="#" class="download-link">查看規範 →</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-type">案例研究</div>
+                    <h3>AI整合成功案例集</h3>
+                    <p>收錄多個AI技術整合的成功案例，詳細介紹實施過程、技術挑戰及解決方案，為類似專案提供實務參考。</p>
+                    <a href="#" class="download-link">瀏覽案例 →</a>
+                </div>
             </div>
-            
-            <div class="max-w-5xl mx-auto">
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-                    <div class="lg:col-span-2 bg-gray-50 rounded-xl p-8">
-                        <h3 class="text-xl font-bold mb-6">聯絡資訊</h3>
-                        
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="font-bold mb-3 flex items-center">
-                                    <i class="fa fa-envelope text-primary mr-2"></i> 電子郵件
-                                </h4>
-                                <p class="text-muted mb-2">zxunimedia@gmail.com</p>
-                                <a href="mailto:zxunimedia@gmail.com" class="text-primary hover:underline">傳送郵件</a>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-bold mb-3 flex items-center">
-                                    <i class="fa fa-line text-[#00C300] mr-2"></i> LINE 聯絡
-                                </h4>
-                                <p class="text-muted mb-2">@271utguf</p>
-                                <a href="https://line.me/ti/p/@271utguf" target="_blank" class="text-primary hover:underline">加入好友</a>
-                            </div>
-                            
-                            <div>
-                                <h4 class="font-bold mb-3 flex items-center">
-                                    <i class="fa fa-facebook-square text-[#1877F2] mr-2"></i> 粉絲專頁
-                                </h4>
-                                <p class="text-muted mb-2">知行跨媒體廣告行銷</p>
-                                <a href="#" class="text-primary hover:underline">前往粉專</a>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-10">
-                            <h4 class="font-bold mb-4">服務時間</h4>
-                            <p class="text-muted mb-2">星期一至星期五: 9:00 - 18:00</p>
-                            <p class="text-muted">星期六: 9:00 - 12:00 (預約制)</p>
-                        </div>
+        </div>
+    </section>
+
+    <!-- 戰略夥伴 -->
+    <section id="partners" class="section">
+        <div class="container">
+            <h2 class="section-title">戰略夥伴</h2>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-icon carbon-tech-icon">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/300e940f08aab789e6cde5ac04cae363" alt="碳基科技" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
                     </div>
-                    
-                    <div class="lg:col-span-3 bg-white rounded-xl p-8 border border-gray-100 shadow-md">
-                        <form id="contact-form" class="space-y-6">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                    <label for="name" class="block text-dark font-medium mb-2">姓名或公司名稱 <span class="text-red-500">*</span></label>
-                                    <input type="text" id="name" name="name" required
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                                        placeholder="請輸入您的姓名或公司名稱">
-                                </div>
-                                
-                                <div>
-                                    <label for="email" class="block text-dark font-medium mb-2">電子郵件 <span class="text-red-500">*</span></label>
-                                    <input type="email" id="email" name="email" required
-                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                                        placeholder="請輸入您的電子郵件">
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label for="service" class="block text-dark font-medium mb-2">感興趣的服務</label>
-                                <select id="service" name="service"
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
-                                    <option value="">請選擇服務類型</option>
-                                    <option value="google-ads">Google Ads G2 驗證</option>
-                                    <option value="website">跨境購物網站架設</option>
-                                    <option value="marketing">廣告行銷代操</option>
-                                    <option value="seo">SEO 關鍵詞優化</option>
-                                    <option value="design">設計服務</option>
-                                    <option value="writing">文案與翻譯</option>
-                                    <option value="other">其他服務</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label for="message" class="block text-dark font-medium mb-2">諮詢內容 <span class="text-red-500">*</span></label>
-                                <textarea id="message" name="message" rows="5" required
-                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
-                                    placeholder="請詳細描述您的需求或問題，以便我們提供更精確的回覆"></textarea>
-                            </div>
-                            
-                            <div>
-                                <label class="flex items-start">
-                                    <input type="checkbox" required
-                                        class="mt-1 mr-3 h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
-                                    <span class="text-sm text-muted">我同意接收相關服務資訊與行銷內容</span>
-                                </label>
-                            </div>
-                            
-                            <button type="submit"
-                                class="w-full bg-secondary hover:bg-secondary/90 text-white font-medium py-4 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
-                                提交諮詢
-                            </button>
-                        </form>
+                    <h3>碳基科技</h3>
+                    <p>專業無人機系統開發商，提供軍用級無人機解決方案，在國防科技領域具備領先優勢。</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- IC晶片外框 -->
+                            <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" stroke-width="3" rx="5"/>
+                            <!-- 內部網格 -->
+                            <g stroke="currentColor" stroke-width="1" fill="none">
+                                <line x1="30" y1="20" x2="30" y2="80"/>
+                                <line x1="40" y1="20" x2="40" y2="80"/>
+                                <line x1="50" y1="20" x2="50" y2="80"/>
+                                <line x1="60" y1="20" x2="60" y2="80"/>
+                                <line x1="70" y1="20" x2="70" y2="80"/>
+                                <line x1="20" y1="30" x2="80" y2="30"/>
+                                <line x1="20" y1="40" x2="80" y2="40"/>
+                                <line x1="20" y1="50" x2="80" y2="50"/>
+                                <line x1="20" y1="60" x2="80" y2="60"/>
+                                <line x1="20" y1="70" x2="80" y2="70"/>
+                            </g>
+                            <!-- 核心處理單元 -->
+                            <rect x="35" y="35" width="30" height="30" fill="currentColor" opacity="0.3" rx="3"/>
+                            <!-- 連接腳 -->
+                            <g stroke="currentColor" stroke-width="2">
+                                <line x1="20" y1="35" x2="15" y2="35"/>
+                                <line x1="20" y1="45" x2="15" y2="45"/>
+                                <line x1="20" y1="55" x2="15" y2="55"/>
+                                <line x1="20" y1="65" x2="15" y2="65"/>
+                                <line x1="80" y1="35" x2="85" y2="35"/>
+                                <line x1="80" y1="45" x2="85" y2="45"/>
+                                <line x1="80" y1="55" x2="85" y2="55"/>
+                                <line x1="80" y1="65" x2="85" y2="65"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <h3>律芯科技</h3>
+                    <p>AI晶片設計與製造專家，專注於高效能AI處理器開發，為智慧系統提供核心運算動力。</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 玻璃面板 -->
+                            <rect x="20" y="25" width="60" height="40" fill="none" stroke="currentColor" stroke-width="3" rx="3"/>
+                            <!-- 電極線路 -->
+                            <g stroke="currentColor" stroke-width="2" fill="none">
+                                <line x1="25" y1="30" x2="75" y2="30"/>
+                                <line x1="25" y1="35" x2="75" y2="35"/>
+                                <line x1="25" y1="40" x2="75" y2="40"/>
+                                <line x1="25" y1="45" x2="75" y2="45"/>
+                                <line x1="25" y1="50" x2="75" y2="50"/>
+                                <line x1="25" y1="55" x2="75" y2="55"/>
+                                <line x1="25" y1="60" x2="75" y2="60"/>
+                            </g>
+                            <!-- 控制單元 -->
+                            <rect x="35" y="70" width="30" height="15" fill="currentColor" rx="2"/>
+                            <!-- 連接線 -->
+                            <line x1="50" y1="65" x2="50" y2="70" stroke="currentColor" stroke-width="2"/>
+                            <!-- 電源指示燈 -->
+                            <circle cx="45" cy="77" r="2" fill="#00ff00"/>
+                        </svg>
+                    </div>
+                    <h3>明星電控</h3>
+                    <p>電控玻璃系統領導品牌，提供智慧建築玻璃解決方案，在建築自動化領域享有盛譽。</p>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- 建築外框 -->
+                            <rect x="25" y="30" width="50" height="50" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <!-- 窗框結構 -->
+                            <rect x="30" y="35" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <rect x="52" y="35" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <rect x="30" y="57" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <rect x="52" y="57" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <!-- 十字分格 -->
+                            <line x1="39" y1="35" x2="39" y2="53" stroke="currentColor" stroke-width="1"/>
+                            <line x1="30" y1="44" x2="48" y2="44" stroke="currentColor" stroke-width="1"/>
+                            <line x1="61" y1="35" x2="61" y2="53" stroke="currentColor" stroke-width="1"/>
+                            <line x1="52" y1="44" x2="70" y2="44" stroke="currentColor" stroke-width="1"/>
+                            <line x1="39" y1="57" x2="39" y2="75" stroke="currentColor" stroke-width="1"/>
+                            <line x1="30" y1="66" x2="48" y2="66" stroke="currentColor" stroke-width="1"/>
+                            <line x1="61" y1="57" x2="61" y2="75" stroke="currentColor" stroke-width="1"/>
+                            <line x1="52" y1="66" x2="70" y2="66" stroke="currentColor" stroke-width="1"/>
+                            <!-- 門 -->
+                            <rect x="40" y="60" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="56" cy="70" r="1" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>協和門窗</h3>
+                    <p>北美市場門窗系統專業供應商，提供高品質建築門窗解決方案，協助拓展海外市場。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我們 -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">聯絡我們</h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">電子郵件</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">聯絡電話</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">公司名稱</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">訊息內容</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">發送訊息</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>公司資訊</h3>
+                        <p><strong>公司名稱：</strong>奇華智能行銷股份有限公司</p>
+                        <p><strong>統一編號：</strong>95442998</p>
+                        <p><strong>負責人：</strong>李孟居總經理</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>聯絡方式</h3>
+                        <p><strong>電話：</strong>03-3223777</p>
+                        <p><strong>電子郵件：</strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cdbeb4a3b9ac8da6a4a0a2e3aea2a0">[email&#160;protected]</a></p>
+                        <p><strong>營業時間：</strong>週一至週五 09:00-18:00</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>公司地址</h3>
+                        <p>新北市板橋區民生路1段33號5樓之6</p>
+                        <p>近板橋車站，交通便利</p>
                     </div>
                 </div>
             </div>
@@ -647,187 +1112,232 @@
     </section>
 
     <!-- 頁腳 -->
-    <footer class="bg-dark text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <div class="flex items-center space-x-2 mb-6">
-                        <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                            <i class="fa fa-line-chart text-primary text-xl"></i>
-                        </div>
-                        <span class="text-xl font-bold">知行跨媒體</span>
-                    </div>
-                    <p class="text-gray-400 mb-6">提供Google Ads G2驗證、網站架設、廣告行銷等一站式服務，協助企業拓展業務，提升品牌價值。</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                        <a href="https://line.me/ti/p/@271utguf" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
-                            <i class="fa fa-line"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-primary rounded-full flex items-center justify-center transition-colors">
-                            <i class="fa fa-google"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6">服務項目</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Google Ads G2 驗證</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">跨境購物網站架設</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">廣告行銷代操</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">SEO 關鍵詞優化</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">設計服務</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">文案與翻譯</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6">快速連結</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">關於我們</a></li>
-                        <li><a href="#examples" class="text-gray-400 hover:text-white transition-colors">成功案例</a></li>
-                        <li><a href="#health-check" class="text-gray-400 hover:text-white transition-colors">網站免費健檢</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">收費標準</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">常見問題</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">聯絡我們</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-bold mb-6">聯絡資訊</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start">
-                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
-                            <span class="text-gray-400">zxunimedia@gmail.com</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-line text-[#00C300] mt-1 mr-3"></i>
-                            <span class="text-gray-400">@271utguf</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-facebook-square text-[#1877F2] mt-1 mr-3"></i>
-                            <span class="text-gray-400">知行跨媒體廣告行銷</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
-                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
-                        </li>
-                    </ul>
-                </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#home">首頁</a>
+                <a href="#about">關於我們</a>
+                <a href="#services">服務項目</a>
+                <a href="#contact">聯絡我們</a>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>© 2023 知行跨媒體廣告行銷. 保留所有權利.</p>
-            </div>
+            <p>&copy; 2024 奇華智能行銷股份有限公司。保留所有權利。</p>
+            <p>統一編號：95442998 | 地址：新北市板橋區民生路1段33號5樓之6</p>
         </div>
     </footer>
 
-    <!-- 回到頂部按鈕 -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 invisible">
-        <i class="fa fa-chevron-up"></i>
-    </button>
-
     <!-- JavaScript -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        // 手機端菜單切換
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+        // 初始化 EmailJS
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // 請替換為您的實際公鑰
+        })();
+
+        // 粒子系統配置
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00ffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00ffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
         });
-        
-        // 導航欄滾動效果
-        const navbar = document.getElementById('navbar');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('py-2', 'shadow');
-                navbar.classList.remove('py-3', 'md:py-4');
-            } else {
-                navbar.classList.add('py-3', 'md:py-4');
-                navbar.classList.remove('py-2', 'shadow');
-            }
-        });
-        
+
         // 平滑滾動
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // 關閉手機菜單
-                    mobileMenu.classList.add('hidden');
-                    
-                    // 滾動到目標位置
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             });
         });
-        
-        // 回到頂部按鈕
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.remove('opacity-0', 'invisible');
-                backToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                backToTopButton.classList.add('opacity-0', 'invisible');
-                backToTopButton.classList.remove('opacity-100', 'visible');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-        
-        // 表單提交處理
-        const contactForm = document.getElementById('contact-form');
-        
-        contactForm.addEventListener('submit', (e) => {
+
+        // 聯絡表單處理
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // 在真實環境中，這裡會有表單提交到伺服器的程式碼
-            // 這裡只是模擬提交成功的效果
+            const statusDiv = document.getElementById('formStatus');
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalBtnText = submitBtn.textContent;
             
-            // 顯示提交中狀態
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.disabled = true;
-            submitButton.innerHTML = '<i class="fa fa-spinner fa-spin mr-2"></i> 提交中...';
+            // 顯示發送中狀態
+            statusDiv.className = 'form-status loading';
+            statusDiv.style.display = 'block';
+            statusDiv.textContent = '正在發送訊息...';
+            submitBtn.textContent = '發送中...';
+            submitBtn.disabled = true;
             
-            // 模擬API請求延遲
-            setTimeout(() => {
-                // 顯示成功訊息
-                contactForm.innerHTML = `
-                    <div class="text-center py-8">
-                        <div class="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-check text-2xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-2">提交成功！</h3>
-                        <p class="text-muted mb-6">感謝您的諮詢，我們的專業顧問將在24小時內與您聯繫</p>
-                        <a href="#" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg transition-colors">
-                            返回首頁
-                        </a>
-                    </div>
-                `;
-            }, 1500);
+            // 收集表單數據
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                company: document.getElementById('company').value,
+                message: document.getElementById('message').value,
+                to_email: 'synta@kimo.com'
+            };
+            
+            // 發送郵件給公司
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                .then(function(response) {
+                    console.log('郵件發送成功!', response.status, response.text);
+                    
+                    // 發送自動回覆給客戶
+                    const autoReplyData = {
+                        to_name: formData.name,
+                        to_email: formData.email,
+                        company_name: '奇華智能行銷股份有限公司'
+                    };
+                    
+                    return emailjs.send('YOUR_SERVICE_ID', 'YOUR_AUTO_REPLY_TEMPLATE_ID', autoReplyData);
+                })
+                .then(function(response) {
+                    console.log('自動回覆發送成功!', response.status, response.text);
+                    
+                    // 顯示成功訊息
+                    statusDiv.className = 'form-status success';
+                    statusDiv.textContent = '訊息發送成功！我們將盡快與您聯繫。';
+                    
+                    // 重置表單
+                    document.getElementById('contactForm').reset();
+                })
+                .catch(function(error) {
+                    console.error('郵件發送失敗:', error);
+                    
+                    // 顯示錯誤訊息
+                    statusDiv.className = 'form-status error';
+                    statusDiv.textContent = '訊息發送失敗，請稍後再試或直接撥打電話聯繫我們。';
+                })
+                .finally(function() {
+                    // 恢復按鈕狀態
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                    
+                    // 3秒後隱藏狀態訊息
+                    setTimeout(function() {
+                        statusDiv.style.display = 'none';
+                    }, 5000);
+                });
+        });
+
+        // 導航欄滾動效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+            } else {
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            }
+        });
+
+        // 頁面載入動畫
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease-in-out';
+            
+            setTimeout(function() {
+                document.body.style.opacity = '1';
+            }, 100);
         });
     </script>
 </body>
