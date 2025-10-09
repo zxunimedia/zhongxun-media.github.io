@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>奇華智能行銷 | AI科技創新領導者</title>
     <meta name="description" content="奇華智能行銷股份有限公司 - 李孟居總經理領導的科技創新企業，專精AI技術整合、智慧製造、電控玻璃應用與國防科技合作">
-    
+    <!-- GA4 追蹤碼 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T68P7Y1DXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T68P7Y1DXV');
+  </script>
     <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1243,6 +1250,35 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* 為郵件鏈接添加專門的樣式 */
+.contact-item a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
 }
 
 .contact-item {
@@ -2018,6 +2054,14 @@ body {
                                 <h4>代表人</h4>
                                 <p>李孟居</p>
                             </div>
+                                                    <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>電子郵件</h4>
+                                <p><a href="mailto:synta@kimo.com">synta@kimo.com</a></p>
+                            </div>
+                        </div>
+
                         </div>
                     </div>
                 </div>
@@ -2368,26 +2412,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // 表單提交
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // 顯示提交動畫
-            showNotification('正在發送訊息...', 'info');
-            
-            // 模擬表單提交
-            setTimeout(() => {
-                showNotification('訊息已成功發送！我們將盡快與您聯繫。', 'success');
-                contactForm.reset();
-                
-                // 重置表單狀態
-                formGroups.forEach(group => {
-                    group.classList.remove('focused', 'has-value');
-                });
-            }, 2000);
+contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // 構建專業的郵件內容
+    const subject = encodeURIComponent(`【奇華智能行銷】官網聯絡 - ${data.subject}`);
+    const body = encodeURIComponent(`親愛的奇華智能行銷團隊，
+
+我透過官網聯絡表單與您聯繫：
+
+📋 聯絡資訊
+姓名：${data.name}
+電子郵件：${data.email}
+聯絡電話：${data.phone || '未提供'}
+諮詢類型：${data.subject}
+
+📝 詳細需求
+${data.message}
+
+期待您的回覆，謝謝！
+
+---
+本訊息來自奇華智能行銷官網
+網址：${window.location.href}
+發送時間：${new Date().toLocaleString('zh-TW')}`);
+    
+    // 打開郵件客戶端發送到指定信箱
+    window.location.href = `mailto:synta@kimo.com?subject=${subject}&body=${body}`;
+    
+    showNotification('正在打開郵件客戶端，請確認發送...', 'info');
+    
+    // 重置表單
+    setTimeout(() => {
+        contactForm.reset();
+        formGroups.forEach(group => {
+            group.classList.remove('focused', 'has-value');
         });
+        showNotification('表單已重置，感謝您的聯繫！', 'success');
+    }, 2000);
+});
     }
     
     // ==================== 通知系統 ====================
@@ -2643,3 +2709,4 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
