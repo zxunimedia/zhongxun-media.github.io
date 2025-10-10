@@ -162,7 +162,17 @@ body {
     color: var(--neon-blue);
     transform: scale(1.05);
 }
+.nav-logo img {
+    height: 2.5rem;
+    width: auto;
+    filter: drop-shadow(0 0 10px var(--neon-blue));
+    transition: all 0.3s ease;
+}
 
+.nav-logo:hover img {
+    filter: drop-shadow(0 0 15px var(--neon-pink));
+    transform: scale(1.1);
+}
 .nav-icon {
     font-size: 1.5rem;
     color: var(--neon-blue);
@@ -513,12 +523,18 @@ body {
     to { transform: rotate(360deg) scale(var(--scale, 1)); }
 }
 
-.brain-icon {
-    font-size: 4rem;
-    color: var(--neon-blue);
+.hero-logo {
+    height: 8rem;
+    width: auto;
     z-index: 2;
     animation: float 3s ease-in-out infinite;
-    text-shadow: 0 0 30px var(--neon-blue);
+    filter: drop-shadow(0 0 30px var(--neon-blue)) drop-shadow(0 0 60px rgba(0, 255, 255, 0.3));
+    transition: all 0.3s ease;
+}
+
+.hero-logo:hover {
+    filter: drop-shadow(0 0 40px var(--neon-pink)) drop-shadow(0 0 80px rgba(255, 20, 147, 0.4));
+    transform: scale(1.05);
 }
 
 @keyframes float {
@@ -889,7 +905,17 @@ body {
     font-size: 2rem;
     color: var(--text-primary);
 }
+.service-logo {
+    height: 3rem;
+    width: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    transition: all 0.3s ease;
+}
 
+.service-card:hover .service-logo {
+    filter: drop-shadow(0 0 15px var(--neon-pink));
+    transform: scale(1.1);
+}
 .service-card h3 {
     font-family: 'Orbitron', monospace;
     font-size: 1.5rem;
@@ -1406,9 +1432,15 @@ body {
     color: var(--text-primary);
 }
 
-.footer-logo i {
-    font-size: 1.5rem;
-    color: var(--neon-blue);
+.footer-logo-img {
+    height: 2rem;
+    width: auto;
+    filter: drop-shadow(0 0 10px var(--neon-blue));
+    transition: all 0.3s ease;
+}
+
+.footer-logo-img:hover {
+    filter: drop-shadow(0 0 15px var(--neon-pink));
 }
 
 .footer-links {
@@ -2711,5 +2743,6 @@ ${data.message}
     </script>
 </body>
 </html>
+
 
 
