@@ -153,11 +153,12 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     font-family: 'Orbitron', monospace;
     font-weight: 700;
     font-size: 1.2rem;
     color: var(--text-primary);
+    text-decoration: none; 
     transition: all 0.3s ease;
 }
 
@@ -165,7 +166,18 @@ body {
     color: var(--neon-blue);
     transform: scale(1.05);
 }
+.logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+}
 
+.logo-image:hover {
+    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+    transform: scale(1.05);
+}
 .nav-icon {
     font-size: 1.5rem;
     color: var(--neon-blue);
@@ -2672,6 +2684,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
 
 
 
