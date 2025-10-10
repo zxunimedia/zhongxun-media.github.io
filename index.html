@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>奇華智能行銷 | AI科技創新領導者</title>
     <meta name="description" content="奇華智能行銷股份有限公司 - 李孟居總經理領導的科技創新企業，專精AI技術整合、智慧製造、電控玻璃應用與國防科技合作">
-    
+    <!-- ✅ Google Search Console 驗證 -->
+  <meta name="google-site-verification" content="googlef0ea2fe3c467b0fc.html" />
+
+  <!-- ✅ Google tag (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T68P7Y1DXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T68P7Y1DXV');
     <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1280,7 +1289,17 @@ body {
     color: var(--text-secondary);
     margin: 0;
 }
+.contact-item a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
 
+.contact-item a:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+    transform: translateX(5px);
+}
 /* Contact Form */
 .contact-form-container {
     background: var(--card-bg);
@@ -2004,11 +2023,19 @@ body {
                             </div>
                         </div>
                         
-                        <div class="contact-item">
+                                               <div class="contact-item">
                             <i class="fas fa-id-card"></i>
                             <div>
                                 <h4>統一編號</h4>
                                 <p>95442998</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>電子郵件</h4>
+                                <p><a href="mailto:synta@kimo.com">synta@kimo.com</a></p>
                             </div>
                         </div>
                         
@@ -2019,6 +2046,7 @@ body {
                                 <p>李孟居</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
                 
@@ -2643,3 +2671,4 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 </body>
 </html>
+
