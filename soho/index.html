@@ -1,3 +1,42 @@
-index.html
-app.js
-styles.css
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOHO App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>歡迎來到 SOHO App</h1>
+  <p>這裡是測試首頁</p>
+  
+  <button onclick="showMessage()">點我測試 JS</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
+function showMessage() {
+  alert("JS 正常運作中！");
+}
+body {
+  background-color: #f5f5f5;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+  padding-top: 50px;
+}
+h1 {
+  color: #333;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #45a049;
+}
+
