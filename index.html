@@ -2,2693 +2,312 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>奇華智能行銷 | AI科技創新領導者</title>
-    <meta name="description" content="奇華智能行銷股份有限公司 - 李孟居總經理領導的科技創新企業，專精AI技術整合、智慧製造、電控玻璃應用與國防科技合作">
-    <!-- ✅ Google Search Console 驗證 -->
-  <meta name="google-site-verification" content="googleae083944863cef9a.html" />
-
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-43J5EXSS5E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-43J5EXSS5E');
-</script>
-
-    <!-- Preload fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E">
-    
-    <style>
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Rajdhani', sans-serif;
-    background: #0a0a0f;
-    color: #ffffff;
-    overflow-x: hidden;
-    line-height: 1.6;
-}
-
-/* Color Variables */
-:root {
-    /* Primary Colors */
-    --primary-bg: #0a0a0f;
-    --secondary-bg: #111118;
-    --card-bg: #1a1a24;
-    
-    /* Neon Colors */
-    --neon-blue: #00ffff;
-    --neon-purple: #8a2be2;
-    --neon-pink: #ff1493;
-    --neon-green: #00ff41;
-    --neon-orange: #ff6b35;
-    
-    /* Accent Colors */
-    --accent-blue: #0099ff;
-    --accent-purple: #6c5ce7;
-    --accent-cyan: #00cec9;
-    
-    /* Text Colors */
-    --text-primary: #ffffff;
-    --text-secondary: #a0a0a0;
-    --text-muted: #666666;
-    
-    /* Gradient */
-    --gradient-primary: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-    --gradient-secondary: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-    --gradient-glow: linear-gradient(135deg, #00ffff40, #8a2be240);
-}
-
-/* Typography */
-.section-title {
-    font-family: 'Orbitron', monospace;
-    font-size: 3rem;
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 1rem;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.section-title:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 20px var(--neon-blue));
-}
-
-.section-subtitle {
-    font-family: 'Orbitron', monospace;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-}
-
-.glow-text {
-    text-shadow: 0 0 10px var(--neon-blue);
-    animation: textGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes textGlow {
-    from {
-        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
-    }
-    to {
-        text-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue);
-    }
-}
-
-/* Navigation */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(10, 10, 15, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.navbar.scrolled {
-    background: rgba(10, 10, 15, 0.98);
-    border-bottom: 1px solid var(--neon-blue);
-    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-family: 'Orbitron', monospace;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    text-decoration: none; 
-    transition: all 0.3s ease;
-}
-
-.nav-logo:hover {
-    color: var(--neon-blue);
-    transform: scale(1.05);
-}
-.logo-image {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
-}
-
-.logo-image:hover {
-    filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
-    transform: scale(1.05);
-}
-.nav-icon {
-    font-size: 1.5rem;
-    color: var(--neon-blue);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-.nav-link {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--neon-blue);
-    background: rgba(0, 255, 255, 0.1);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
-}
-
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: var(--gradient-primary);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
-
-.nav-link:hover::after {
-    width: 80%;
-}
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 0.2rem;
-}
-
-.nav-toggle span {
-    width: 25px;
-    height: 2px;
-    background: var(--neon-blue);
-    transition: all 0.3s ease;
-}
-
-/* Hero Section */
-.hero-section {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    overflow: hidden;
-    background: radial-gradient(ellipse at center, #111118 0%, var(--primary-bg) 100%);
-}
-
-.particles-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.hero-grid {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: gridMove 20s linear infinite;
-}
-
-@keyframes gridMove {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.hero-text {
-    animation: slideInLeft 1s ease-out;
-}
-
-.hero-subtitle {
-    font-family: 'Orbitron', monospace;
-    font-size: 0.9rem;
-    color: var(--neon-blue);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    opacity: 0.8;
-}
-
-.glitch {
-    position: relative;
-    overflow: hidden;
-}
-
-.glitch span {
-    position: relative;
-    z-index: 1;
-}
-
-.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-}
-
-.glitch::before {
-    color: var(--neon-pink);
-    animation: glitch1 2s infinite;
-}
-
-.glitch::after {
-    color: var(--neon-blue);
-    animation: glitch2 2s infinite;
-}
-
-@keyframes glitch1 {
-    0%, 90%, 100% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(2px, -2px); }
-    60% { transform: translate(-2px, -2px); }
-    80% { transform: translate(2px, 2px); }
-}
-
-@keyframes glitch2 {
-    0%, 90%, 100% { transform: translate(0); }
-    10% { transform: translate(2px, -2px); }
-    30% { transform: translate(-2px, 2px); }
-    50% { transform: translate(2px, 2px); }
-    70% { transform: translate(-2px, -2px); }
-}
-
-.hero-title {
-    font-family: 'Orbitron', monospace;
-    font-size: 4rem;
-    font-weight: 900;
-    line-height: 1.2;
-    margin: 1rem 0 2rem 0;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.typing-text {
-    border-right: 2px solid var(--neon-blue);
-}
-
-.cursor {
-    color: var(--neon-blue);
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
-}
-
-.hero-description {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
-.hero-stats {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    font-family: 'Orbitron', monospace;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--neon-blue);
-    display: block;
-    text-shadow: 0 0 10px var(--neon-blue);
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    text-decoration: none;
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-.btn-primary {
-    background: var(--gradient-primary);
-    color: var(--text-primary);
-    border: 2px solid transparent;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
-    filter: brightness(1.2);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: var(--neon-blue);
-    border: 2px solid var(--neon-blue);
-}
-
-.btn-secondary:hover {
-    background: rgba(0, 255, 255, 0.1);
-    color: var(--text-primary);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.btn:hover::before {
-    left: 100%;
-}
-
-/* Hero Visual */
-.hero-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slideInRight 1s ease-out;
-}
-
-.hologram {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hologram-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 2px solid;
-    border-radius: 50%;
-    animation: rotate 10s linear infinite;
-}
-
-.hologram-layer:nth-child(1) {
-    border-color: var(--neon-blue);
-    animation-duration: 8s;
-    transform: scale(1);
-}
-
-.hologram-layer:nth-child(2) {
-    border-color: var(--neon-purple);
-    animation-duration: 10s;
-    animation-direction: reverse;
-    transform: scale(0.8);
-}
-
-.hologram-layer:nth-child(3) {
-    border-color: var(--neon-pink);
-    animation-duration: 12s;
-    transform: scale(0.6);
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg) scale(var(--scale, 1)); }
-    to { transform: rotate(360deg) scale(var(--scale, 1)); }
-}
-
-.brain-icon {
-    font-size: 4rem;
-    color: var(--neon-blue);
-    z-index: 2;
-    animation: float 3s ease-in-out infinite;
-    text-shadow: 0 0 30px var(--neon-blue);
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    animation: bounce 2s infinite;
-}
-
-.scroll-line {
-    width: 2px;
-    height: 40px;
-    background: var(--gradient-primary);
-    border-radius: 2px;
-}
-
-.scroll-text {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-}
-
-/* Sections */
-.section {
-    padding: 6rem 0;
-    position: relative;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.title-line {
-    width: 100px;
-    height: 3px;
-    background: var(--gradient-primary);
-    margin: 2rem auto;
-    border-radius: 2px;
-}
-
-/* About Section */
-.about-section {
-    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.about-content h3 {
-    font-family: 'Orbitron', monospace;
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    color: var(--neon-blue);
-}
-
-.about-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
-.feature-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: rgba(0, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-    background: rgba(0, 255, 255, 0.1);
-    transform: translateX(10px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
-}
-
-.feature-item i {
-    font-size: 1.5rem;
-    color: var(--neon-blue);
-    margin-top: 0.2rem;
-}
-
-.feature-item h4 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.feature-item p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin: 0;
-}
-
-/* Tech Cube */
-.about-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.tech-cube {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    animation: rotateCube 10s linear infinite;
-}
-
-.cube-face {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Orbitron', monospace;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    border: 2px solid var(--neon-blue);
-    background: rgba(0, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-}
-
-.cube-face.front { transform: translateZ(100px); }
-.cube-face.back { transform: rotateY(180deg) translateZ(100px); }
-.cube-face.right { transform: rotateY(90deg) translateZ(100px); }
-.cube-face.left { transform: rotateY(-90deg) translateZ(100px); }
-.cube-face.top { transform: rotateX(90deg) translateZ(100px); }
-.cube-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
-
-@keyframes rotateCube {
-    from { transform: rotateX(0) rotateY(0) rotateZ(0); }
-    to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
-}
-
-/* CEO Section */
-.ceo-section {
-    background: var(--secondary-bg);
-}
-
-.ceo-profile {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.ceo-image {
-    display: flex;
-    justify-content: center;
-}
-
-.image-frame {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.holographic-border {
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: conic-gradient(from 0deg, var(--neon-blue), var(--neon-purple), var(--neon-pink), var(--neon-blue));
-    border-radius: 50%;
-    animation: rotateBorder 3s linear infinite;
-}
-
-@keyframes rotateBorder {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.profile-placeholder {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: var(--card-bg);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-}
-
-.profile-placeholder i {
-    font-size: 6rem;
-    color: var(--neon-blue);
-}
-
-.ceo-content {
-    padding: 2rem;
-}
-
-.ceo-name {
-    font-family: 'Orbitron', monospace;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--neon-blue);
-    margin-bottom: 0.5rem;
-}
-
-.ceo-title {
-    font-size: 1.2rem;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    margin-bottom: 2rem;
-}
-
-.ceo-description p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
-.achievements h4 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.5rem;
-    color: var(--neon-blue);
-    margin-bottom: 1.5rem;
-}
-
-.achievement-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-.achievement-item {
-    display: flex;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: rgba(0, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-}
-
-.achievement-item:hover {
-    background: rgba(0, 255, 255, 0.1);
-    transform: translateY(-5px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
-}
-
-.achievement-item i {
-    font-size: 1.5rem;
-    color: var(--neon-blue);
-    margin-top: 0.2rem;
-}
-
-.achievement-item h5 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.achievement-item p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin: 0;
-}
-
-/* Services Section */
-.services-section {
-    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.service-card:hover::before {
-    left: 100%;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-    background: linear-gradient(135deg, var(--card-bg), rgba(0, 255, 255, 0.05));
-}
-
-.service-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 2rem;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.service-icon i {
-    font-size: 2rem;
-    color: var(--text-primary);
-}
-
-.service-card h3 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    transition: color 0.3s ease;
-}
-
-.service-card:hover h3 {
-    color: var(--neon-blue);
-}
-
-.service-card p {
-    line-height: 1.6;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
-.service-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-}
-
-.service-features span {
-    background: rgba(0, 255, 255, 0.1);
-    color: var(--neon-blue);
-    padding: 0.3rem 0.8rem;
-    border-radius: 1rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid rgba(0, 255, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.service-card:hover .service-features span {
-    background: rgba(0, 255, 255, 0.2);
-    border-color: var(--neon-blue);
-}
-
-/* News Section */
-.news-section {
-    background: var(--secondary-bg);
-}
-
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.news-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.news-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.news-card:hover::before {
-    transform: scaleX(1);
-}
-
-.news-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2);
-}
-
-.news-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.news-source {
-    background: var(--gradient-primary);
-    color: var(--text-primary);
-    padding: 0.3rem 0.8rem;
-    border-radius: 0.5rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.news-date {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
-
-.news-card h3 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.2rem;
-    line-height: 1.4;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    transition: color 0.3s ease;
-}
-
-.news-card:hover h3 {
-    color: var(--neon-blue);
-}
-
-.news-card p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.news-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--neon-blue);
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.news-link:hover {
-    color: var(--neon-pink);
-    transform: translateX(5px);
-}
-
-/* Resources Section */
-.resources-section {
-    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
-}
-
-.resources-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-}
-
-.resource-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    padding: 2rem;
-    display: flex;
-    gap: 1.5rem;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.resource-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.resource-card:hover::before {
-    left: 100%;
-}
-
-.resource-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 15px 35px rgba(0, 255, 255, 0.2);
-}
-
-.resource-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-primary);
-    border-radius: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.resource-icon i {
-    font-size: 1.5rem;
-    color: var(--text-primary);
-}
-
-.resource-content h3 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    transition: color 0.3s ease;
-}
-
-.resource-card:hover h3 {
-    color: var(--neon-blue);
-}
-
-.resource-content p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.resource-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.resource-tags span {
-    background: rgba(0, 255, 255, 0.1);
-    color: var(--neon-blue);
-    padding: 0.3rem 0.8rem;
-    border-radius: 1rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid rgba(0, 255, 255, 0.3);
-    transition: all 0.3s ease;
-}
-
-.resource-card:hover .resource-tags span {
-    background: rgba(0, 255, 255, 0.2);
-    border-color: var(--neon-blue);
-}
-
-/* Partners Section */
-.partners-section {
-    background: var(--secondary-bg);
-}
-
-.partners-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.partner-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.partner-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.partner-card:hover::before {
-    left: 100%;
-}
-
-.partner-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    border-color: var(--neon-blue);
-    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-}
-
-.partner-icon {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 1.5rem;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.partner-icon i {
-    font-size: 1.5rem;
-    color: var(--text-primary);
-}
-
-.partner-card h3 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-    transition: color 0.3s ease;
-}
-
-.partner-card:hover h3 {
-    color: var(--neon-blue);
-}
-
-.partner-card p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    font-size: 0.9rem;
-}
-
-.partnership-note {
-    text-align: center;
-    margin-top: 3rem;
-    padding: 2rem;
-    background: rgba(0, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-}
-
-.partnership-note p {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    font-style: italic;
-}
-
-/* Contact Section */
-.contact-section {
-    background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: flex-start;
-}
-
-.contact-info h3 {
-    font-family: 'Orbitron', monospace;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--neon-blue);
-}
-
-.contact-info p {
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-}
-
-.contact-items {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: rgba(0, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-}
-
-.contact-item:hover {
-    background: rgba(0, 255, 255, 0.1);
-    transform: translateX(10px);
-    border-color: var(--neon-blue);
-    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
-}
-
-.contact-item i {
-    font-size: 1.5rem;
-    color: var(--neon-blue);
-    margin-top: 0.2rem;
-}
-
-.contact-item h4 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.contact-item p {
-    color: var(--text-secondary);
-    margin: 0;
-}
-.contact-item a {
-    color: var(--neon-blue);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.contact-item a:hover {
-    color: var(--neon-pink);
-    text-shadow: 0 0 10px var(--neon-pink);
-    transform: translateX(5px);
-}
-/* Contact Form */
-.contact-form-container {
-    background: var(--card-bg);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 1rem;
-    padding: 2rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.form-group {
-    position: relative;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 1rem;
-    background: rgba(0, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.2);
-    border-radius: 0.5rem;
-    color: var(--text-primary);
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--neon-blue);
-    background: rgba(0, 255, 255, 0.1);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-}
-
-.form-group label {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    color: var(--text-secondary);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group select:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label,
-.form-group select:not([value=""]) + label {
-    top: -0.5rem;
-    left: 0.5rem;
-    font-size: 0.8rem;
-    color: var(--neon-blue);
-    background: var(--card-bg);
-    padding: 0 0.5rem;
-}
-
-/* Footer */
-.footer {
-    background: var(--primary-bg);
-    border-top: 1px solid rgba(0, 255, 255, 0.2);
-    padding: 3rem 0 2rem;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-family: 'Orbitron', monospace;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--text-primary);
-}
-
-.footer-logo i {
-    font-size: 1.5rem;
-    color: var(--neon-blue);
-}
-
-.footer-links {
-    display: flex;
-    gap: 2rem;
-}
-
-.footer-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--neon-blue);
-    transform: translateY(-2px);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(0, 255, 255, 0.1);
-}
-
-.footer-bottom p {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
-}
-
-/* Animations */
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes ripple {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(4);
-        opacity: 0;
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 3rem;
-    }
-    
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .ceo-profile {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        text-align: center;
-    }
-    
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-    
-    .achievement-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(10, 10, 15, 0.98);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: left 0.3s ease;
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .nav-toggle {
-        display: flex;
-    }
-    
-    .nav-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .nav-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .nav-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .hero-stats {
-        justify-content: center;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-    
-    .footer-links {
-        justify-content: center;
-    }
-}
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SOHO專案管理系統</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="#hero" class="nav-logo">
-            <img src="company-logo.png" alt="奇華智能行銷" class="logo-image">
-            <span class="nav-brand">奇華智能</span>
-        </a>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link">首頁</a></li>
-                <li><a href="#about" class="nav-link">關於我們</a></li>
-                <li><a href="#ceo" class="nav-link">執行長</a></li>
-                <li><a href="#services" class="nav-link">核心業務</a></li>
-                <li><a href="#news" class="nav-link">媒體報導</a></li>
-                <li><a href="#resources" class="nav-link">技術資源</a></li>
-                <li><a href="#partners" class="nav-link">戰略夥伴</a></li>
-                <li><a href="#contact" class="nav-link">聯絡我們</a></li>
-            </ul>
-            
-            <div class="nav-toggle" id="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div class="app-container">
+        <!-- 動態背景 -->
+        <div class="background-gradient">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="particles-container" id="particles"></div>
-        <div class="hero-grid"></div>
-        
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-subtitle glitch" data-text="FUTURE TECHNOLOGY">
-                    <span>FUTURE TECHNOLOGY</span>
-                </div>
-                <h1 class="hero-title">
-                    <span class="typing-text" id="typing-text"></span>
-                    <span class="cursor">|</span>
-                </h1>
-                <p class="hero-description">
-                    領導AI科技創新革命，打造智慧未來商業生態系統
-                    <br>專精人工智慧、智慧製造、電控玻璃與國防科技整合
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="50">0</div>
-                        <div class="stat-label">合作企業</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="100">0</div>
-                        <div class="stat-label">成功專案</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number" data-count="15">0</div>
-                        <div class="stat-label">技術領域</div>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#about" class="btn btn-primary">
-                        <span>探索更多</span>
-                        <i class="fas fa-rocket"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>聯絡我們</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                </div>
+        <!-- 頂部導航 -->
+        <header class="header">
+            <div class="app-logo">💼 SOHO Manager</div>
+            <div class="date-display">
+                <div class="current-date" id="currentDate"></div>
+                <div class="current-time" id="currentTime"></div>
             </div>
-            
-            <div class="hero-visual">
-                <div class="hologram">
-                    <div class="hologram-layer"></div>
-                    <div class="hologram-layer"></div>
-                    <div class="hologram-layer"></div>
-                    <i class="fas fa-brain brain-icon"></i>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <div class="scroll-text">向下滾動</div>
-        </div>
-    </section>
+        </header>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
-        <div class="container">
+        <!-- 收支總覽卡片 -->
+        <section class="summary-card glass-morphism">
+            <div class="card-title">本月收支</div>
+            <div class="main-balance" id="mainBalance">$0</div>
+            <div class="balance-change" id="balanceChange">+0%</div>
+            
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="item-icon income-icon">📈</div>
+                    <div class="item-info">
+                        <span class="item-label">收入</span>
+                        <span class="item-amount" id="totalIncome">$0</span>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <div class="item-icon expense-icon">📉</div>
+                    <div class="item-info">
+                        <span class="item-label">支出</span>
+                        <span class="item-amount" id="totalExpense">$0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 週曆視圖 -->
+        <section class="calendar-section">
+            <div class="calendar-header">
+                <button class="nav-btn liquid-btn" id="prevWeek">
+                    <span>◀</span>
+                    <span class="btn-liquid"></span>
+                </button>
+                <h2 class="week-title" id="weekTitle"></h2>
+                <button class="nav-btn liquid-btn" id="nextWeek">
+                    <span>▶</span>
+                    <span class="btn-liquid"></span>
+                </button>
+            </div>
+            <div class="week-calendar" id="weekCalendar"></div>
+        </section>
+
+        <!-- 今日任務提醒 -->
+        <section class="reminders-section glass-morphism">
+            <h2>📌 今日提醒</h2>
+            <div class="reminders-list" id="remindersList">
+                <p class="empty-message">今天沒有待辦事項</p>
+            </div>
+        </section>
+
+        <!-- 專案列表 -->
+        <section class="projects-section">
             <div class="section-header">
-                <h2 class="section-title glow-text">關於奇華智能</h2>
-                <div class="section-subtitle">ABOUT MOJO LIVE</div>
-                <div class="title-line"></div>
+                <h2>進行中的專案</h2>
+                <button class="liquid-btn add-btn" id="addProjectBtn">
+                    <span class="btn-text">+ 新增專案</span>
+                    <span class="btn-liquid"></span>
+                </button>
             </div>
-            
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>引領科技創新的先驅企業</h3>
-                        <p>奇華智能行銷股份有限公司成立於2024年，是一家專注於前沿科技整合與商業應用的創新企業。我們致力於推動人工智慧、智慧製造、電控玻璃技術與國防科技的跨域整合。</p>
-                        
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <i class="fas fa-robot"></i>
-                                <div>
-                                    <h4>AI技術整合</h4>
-                                    <p>深度學習、機器學習、自然語言處理等AI技術商業化應用</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-industry"></i>
-                                <div>
-                                    <h4>智慧製造</h4>
-                                    <p>工業4.0解決方案、數位雙生技術、自動化生產系統</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <div>
-                                    <h4>國防科技</h4>
-                                    <p>無人機技術、國防工業合作、軍民兩用技術轉化</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-visual">
-                    <div class="tech-cube">
-                        <div class="cube-face front">AI</div>
-                        <div class="cube-face back">IoT</div>
-                        <div class="cube-face right">5G</div>
-                        <div class="cube-face left">AR</div>
-                        <div class="cube-face top">VR</div>
-                        <div class="cube-face bottom">ML</div>
-                    </div>
-                </div>
+            <div class="projects-list" id="projectsList"></div>
+        </section>
+
+        <!-- 快速操作按鈕 -->
+        <div class="fab-container">
+            <button class="fab liquid-btn" id="fabBtn">
+                <span class="fab-icon">+</span>
+                <span class="btn-liquid"></span>
+            </button>
+            <div class="fab-menu" id="fabMenu">
+                <button class="fab-item liquid-btn" data-action="add-project">
+                    <span>📁 新增專案</span>
+                    <span class="btn-liquid"></span>
+                </button>
+                <button class="fab-item liquid-btn" data-action="add-task">
+                    <span>✓ 新增任務</span>
+                    <span class="btn-liquid"></span>
+                </button>
+                <button class="fab-item liquid-btn" data-action="add-transaction">
+                    <span>💰 記帳</span>
+                    <span class="btn-liquid"></span>
+                </button>
             </div>
         </div>
-    </section>
 
-    <!-- CEO Section -->
-    <section id="ceo" class="section ceo-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title glow-text">執行長專區</h2>
-                <div class="section-subtitle">LEADERSHIP PROFILE</div>
-                <div class="title-line"></div>
-            </div>
-            
-            <div class="ceo-profile">
-                <div class="ceo-image">
-                    <div class="image-frame">
-                        <div class="holographic-border"></div>
-                        <div class="profile-placeholder">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                    </div>
+        <!-- 模態視窗 - 新增專案 -->
+        <div class="modal" id="projectModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content glass-morphism">
+                <div class="modal-header">
+                    <h2>新增專案</h2>
+                    <button class="close-btn" data-modal="projectModal">×</button>
                 </div>
-                
-                <div class="ceo-content">
-                    <div class="ceo-header">
-                        <h3 class="ceo-name">李孟居</h3>
-                        <div class="ceo-title">執行長暨創辦人</div>
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label>專案名稱</label>
+                        <input type="text" name="name" required placeholder="例：XX品牌社群代營運" class="glass-input">
                     </div>
-                    
-                    <div class="ceo-description">
-                        <p>李孟居先生是科技產業的資深領導者，擁有豐富的跨國企業管理經驗和深厚的技術背景。他致力於推動台灣科技產業的國際化發展，並在人工智慧、智慧製造、電控玻璃技術等領域建立了廣泛的合作網絡。</p>
+                    <div class="form-group">
+                        <label>客戶名稱</label>
+                        <input type="text" name="client" placeholder="客戶或公司名稱" class="glass-input">
                     </div>
-                    
-                    <div class="achievements">
-                        <h4>核心成就</h4>
-                        <div class="achievement-grid">
-                            <div class="achievement-item">
-                                <i class="fas fa-handshake"></i>
-                                <div>
-                                    <h5>戰略合作推手</h5>
-                                    <p>成功促成碳基科技、律芯科技、振生半導體等多家企業的策略聯盟</p>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-globe"></i>
-                                <div>
-                                    <h5>國際市場開拓</h5>
-                                    <p>協助電控玻璃技術進軍北美市場，建立跨國合作橋樑</p>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-chart-line"></i>
-                                <div>
-                                    <h5>企業健診專家</h5>
-                                    <p>提供企業轉型諮詢，協助傳統產業數位化升級</p>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-award"></i>
-                                <div>
-                                    <h5>創新領導者</h5>
-                                    <p>在2025台北國際航太暨國防工業展覽會中展現卓越領導力</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title glow-text">核心業務</h2>
-                <div class="section-subtitle">CORE SERVICES</div>
-                <div class="title-line"></div>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI技術整合</h3>
-                    <p>提供全方位人工智慧解決方案，包括機器學習、深度學習、自然語言處理等前沿技術的商業化應用。</p>
-                    <div class="service-features">
-                        <span>生成式AI</span>
-                        <span>機器學習</span>
-                        <span>電腦視覺</span>
-                        <span>語音識別</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>智慧製造</h3>
-                    <p>推動工業4.0轉型，提供智慧工廠、數位雙生、自動化生產線等先進製造技術解決方案。</p>
-                    <div class="service-features">
-                        <span>數位雙生</span>
-                        <span>IIoT</span>
-                        <span>自動化</span>
-                        <span>品質控制</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>電控玻璃應用</h3>
-                    <p>專精於智慧玻璃技術的商業應用，結合AI感測技術，打造未來感十足的互動空間體驗。</p>
-                    <div class="service-features">
-                        <span>智慧調光</span>
-                        <span>隱私控制</span>
-                        <span>AI整合</span>
-                        <span>節能環保</span>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-fighter-jet"></i>
-                    </div>
-                    <h3>國防科技合作</h3>
-                    <p>參與國防工業技術研發，專注於無人機、軍用AI系統等國防科技領域的創新應用。</p>
-                    <div class="service-features">
-                        <span>無人機</span>
-                        <span>軍用AI</span>
-                        <span>國防工業</span>
-                        <span>技術轉移</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="section news-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title glow-text">媒體報導</h2>
-                <div class="section-subtitle">MEDIA COVERAGE</div>
-                <div class="title-line"></div>
-            </div>
-            
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-header">
-                        <div class="news-source">經濟日報</div>
-                        <div class="news-date">2025.09.24</div>
-                    </div>
-                    <h3>李孟居盼攜手碳基科技組無人機民防隊</h3>
-                    <p>在2025臺北國際航太暨國防工業展覽會上，奇華智能行銷總經理李孟居成功促成碳基科技與國際合作夥伴的戰略聯盟...</p>
-                    <a href="https://money.udn.com/money/story/5635/9025883" target="_blank" class="news-link">
-                        <span>閱讀全文</span>
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <div class="news-header">
-                        <div class="news-source">聯合新聞網</div>
-                        <div class="news-date">2025.10.01</div>
-                    </div>
-                    <h3>可切換透明/霧化電控玻璃×AI互動應用</h3>
-                    <p>奇華智能行銷成功促成明星電控科技、協和鋁門窗與奇華廣告三方合作，開發創新電控玻璃AI整合應用...</p>
-                    <a href="https://money.udn.com/money/amp/story/5721/9031799" target="_blank" class="news-link">
-                        <span>閱讀全文</span>
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-                
-                <div class="news-card">
-                    <div class="news-header">
-                        <div class="news-source">東森新聞</div>
-                        <div class="news-date">2025.09.22</div>
-                    </div>
-                    <h3>奇華智能行銷助力企業突破瓶頸</h3>
-                    <p>李孟居以其卓越的企業健診服務，成功協助促成律芯科技與振生半導體的強強聯手，開啟AI與半導體領域新合作...</p>
-                    <a href="https://news.ebc.net.tw/news/living/513305" target="_blank" class="news-link">
-                        <span>閱讀全文</span>
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resources Section -->
-    <section id="resources" class="section resources-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title glow-text">技術資源</h2>
-                <div class="section-subtitle">TECHNICAL RESOURCES</div>
-                <div class="title-line"></div>
-            </div>
-            
-            <div class="resources-grid">
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
-                    <div class="resource-content">
-                        <h3>2025-2026產業技術白皮書</h3>
-                        <p>深入分析台灣未來十年在AI、智慧製造、半導體、無人機等領域的技術趨勢與發展重點。涵蓋主權AI、生成式AI、異質整合Chiplet等前瞻技術。</p>
-                        <div class="resource-tags">
-                            <span>AI技術</span>
-                            <span>智慧製造</span>
-                            <span>半導體</span>
-                            <span>無人機</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="resource-card">
-                    <div class="resource-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <div class="resource-content">
-                        <h3>北美電控玻璃市場趨勢</h3>
-                        <p>詳細分析北美地區電控玻璃在商業辦公、飯店餐旅、醫療照護等服務業的應用場景、技術優勢與商業價值。預測2031年市場規模達170億美元。</p>
-                        <div class="resource-tags">
-                            <span>電控玻璃</span>
-                            <span>市場分析</span>
-                            <span>商業應用</span>
-                            <span>技術趨勢</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section id="partners" class="section partners-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title glow-text">戰略夥伴</h2>
-                <div class="section-subtitle">STRATEGIC PARTNERS</div>
-                <div class="title-line"></div>
-            </div>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-icon">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <h3>碳基科技</h3>
-                    <p>無人機技術領域合作夥伴，專精軍用無人機研發與製造，共同拓展國防科技市場。</p>
-                </div>
-                
-                <div class="partner-card">
-                    <div class="partner-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <h3>律芯科技 & 振生半導體</h3>
-                    <p>AI晶片與半導體技術合作，專注於多模態AI感測模組與後量子密碼技術整合。</p>
-                </div>
-                
-                <div class="partner-card">
-                    <div class="partner-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>明星電控科技</h3>
-                    <p>電控玻璃技術合作夥伴，共同開發智慧玻璃AI整合應用解決方案。</p>
-                </div>
-                
-                <div class="partner-card">
-                    <div class="partner-icon">
-                        <i class="fas fa-window-maximize"></i>
-                    </div>
-                    <h3>協和門窗 (Tempco Glass)</h3>
-                    <p>美國門窗製造合作夥伴，協助電控玻璃技術進軍北美市場。</p>
-                </div>
-                
-                <div class="partner-card">
-                    <div class="partner-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>JustThings</h3>
-                    <p>AI解決方案合作夥伴，專精智慧客服、翻譯面板等AI商業應用開發。</p>
-                </div>
-            </div>
-            
-            <div class="partnership-note">
-                <p>我們與全球領先的科技企業建立深度合作關係，共同推動技術創新與市場拓展。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title glow-text">聯絡我們</h2>
-                <div class="section-subtitle">CONTACT US</div>
-                <div class="title-line"></div>
-            </div>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>取得聯繫</h3>
-                    <p>歡迎與我們討論合作機會，共同探索科技創新的無限可能。</p>
-                    
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <i class="fas fa-building"></i>
-                            <div>
-                                <h4>公司地址</h4>
-                                <p>新北市板橋區民生路1段33號5樓之6</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>聯絡電話</h4>
-                                <p>03-3223777</p>
-                            </div>
-                        </div>
-                        
-                                               <div class="contact-item">
-                            <i class="fas fa-id-card"></i>
-                            <div>
-                                <h4>統一編號</h4>
-                                <p>95442998</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>電子郵件</h4>
-                                <p><a href="mailto:synta@kimo.com">synta@kimo.com</a></p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <i class="fas fa-user-tie"></i>
-                            <div>
-                                <h4>代表人</h4>
-                                <p>李孟居</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                
-                <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
+                    <div class="form-row">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required>
-                            <label for="name">姓名</label>
+                            <label>簽約金額</label>
+                            <input type="number" name="contractAmount" placeholder="0" class="glass-input">
                         </div>
-                        
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required>
-                            <label for="email">電子郵件</label>
+                            <label>開始日期</label>
+                            <input type="date" name="startDate" required class="glass-input">
                         </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone">
-                            <label for="phone">聯絡電話</label>
-                        </div>
-                        
-                        <div class="form-group">
-                            <select id="subject" name="subject" required>
-                                <option value="">請選擇諮詢類型</option>
-                                <option value="ai">AI技術整合</option>
-                                <option value="manufacturing">智慧製造</option>
-                                <option value="glass">電控玻璃應用</option>
-                                <option value="defense">國防科技合作</option>
-                                <option value="other">其他合作</option>
-                            </select>
-                            <label for="subject">諮詢類型</label>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                            <label for="message">詳細需求</label>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">
-                            <span>發送訊息</span>
-                            <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <div class="form-group">
+                        <label>專案類型</label>
+                        <select name="type" class="glass-input">
+                            <option value="social-media">社群媒體</option>
+                            <option value="design">設計</option>
+                            <option value="development">開發</option>
+                            <option value="consulting">顧問</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>備註</label>
+                        <textarea name="notes" rows="3" placeholder="專案相關說明..." class="glass-input"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="liquid-btn btn-secondary" data-modal="projectModal">
+                            <span>取消</span>
+                            <span class="btn-liquid"></span>
                         </button>
-                    </form>
-                </div>
+                        <button type="submit" class="liquid-btn btn-primary">
+                            <span>建立專案</span>
+                            <span class="btn-liquid"></span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <i class="fas fa-brain"></i>
-                    <span>奇華智能行銷</span>
+        <!-- 模態視窗 - 新增任務 -->
+        <div class="modal" id="taskModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content glass-morphism">
+                <div class="modal-header">
+                    <h2>新增任務</h2>
+                    <button class="close-btn" data-modal="taskModal">×</button>
                 </div>
-                
-                <div class="footer-links">
-                    <a href="#about">關於我們</a>
-                    <a href="#services">核心業務</a>
-                    <a href="#news">媒體報導</a>
-                    <a href="#contact">聯絡我們</a>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 奇華智能行銷股份有限公司 MoJo Live Intelligent Marketing CO., LTD. 版權所有</p>
-                <p>統一編號: 95442998 | 代表人: 李孟居</p>
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label>任務名稱</label>
+                        <input type="text" name="title" required placeholder="例：廣告代po" class="glass-input">
+                    </div>
+                    <div class="form-group">
+                        <label>所屬專案</label>
+                        <select name="projectId" id="taskProjectSelect" required class="glass-input">
+                            <option value="">請選擇專案</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>執行日期</label>
+                            <input type="date" name="dueDate" required class="glass-input">
+                        </div>
+                        <div class="form-group">
+                            <label>提醒時間</label>
+                            <input type="time" name="reminderTime" value="09:00" class="glass-input">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>重複設定</label>
+                        <select name="recurring" id="recurringSelect" class="glass-input">
+                            <option value="none">不重複</option>
+                            <option value="daily">每天</option>
+                            <option value="weekly">每週</option>
+                            <option value="custom">自訂週期</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="customRecurringGroup" style="display:none;">
+                        <label>選擇星期幾</label>
+                        <div class="weekday-selector">
+                            <label class="weekday-checkbox">
+                                <input type="checkbox" name="weekdays" value="1"> 一
+                            </label>
+                            <label class="weekday-checkbox">
+                                <input type="checkbox" name="weekdays" value="2"> 二
+                            </label>
+                            <label class="weekday-checkbox">
+                                <input type="checkbox" name="weekdays" value="3"> 三
+                            </label>
+                            <label class="weekday-checkbox">
+                                <input type="checkbox" name="weekdays" value="4"> 四
+                            </label>
+                            <label class="weekday-checkbox">
+                                <input type="checkbox" name="weekdays" value="5"> 五
+                            </label>
+                            <label class="weekday-checkbox">
+                                <input type="checkbox" name="weekdays" value="6"> 六
+                            </label>
+                            <label class="weekday-checkbox">
+                                <input type="checkbox" name="weekdays" value="0"> 日
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="liquid-btn btn-secondary" data-modal="taskModal">
+                            <span>取消</span>
+                            <span class="btn-liquid"></span>
+                        </button>
+                        <button type="submit" class="liquid-btn btn-primary">
+                            <span>新增任務</span>
+                            <span class="btn-liquid"></span>
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </footer>
 
-    <!-- JavaScript -->
-    <script>
-// AI科技感網站主要JavaScript功能
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // ==================== 導航欄功能 ====================
-    const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    // 導航欄滾動效果
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-    
-    // 移動端導航切換
-    navToggle.addEventListener('click', function() {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-    
-    // 導航鏈接點擊
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-            
-            // 關閉移動端菜單
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-    
-    // ==================== 粒子動畫背景 ====================
-    class ParticleSystem {
-        constructor(container) {
-            this.container = container;
-            this.particles = [];
-            this.particleCount = 80;
-            this.init();
-        }
-        
-        init() {
-            this.createParticles();
-            this.animate();
-        }
-        
-        createParticles() {
-            for (let i = 0; i < this.particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.cssText = `
-                    position: absolute;
-                    width: ${Math.random() * 4 + 1}px;
-                    height: ${Math.random() * 4 + 1}px;
-                    background: ${this.getRandomColor()};
-                    border-radius: 50%;
-                    pointer-events: none;
-                    opacity: ${Math.random() * 0.8 + 0.2};
-                    box-shadow: 0 0 ${Math.random() * 10 + 5}px currentColor;
-                `;
-                
-                // 隨機初始位置
-                particle.style.left = Math.random() * window.innerWidth + 'px';
-                particle.style.top = Math.random() * window.innerHeight + 'px';
-                
-                // 添加粒子運動數據
-                particle.vx = (Math.random() - 0.5) * 2;
-                particle.vy = (Math.random() - 0.5) * 2;
-                particle.life = Math.random() * 300 + 200;
-                particle.maxLife = particle.life;
-                
-                this.particles.push(particle);
-                this.container.appendChild(particle);
-            }
-        }
-        
-        getRandomColor() {
-            const colors = ['#00ffff', '#8a2be2', '#ff1493', '#00ff41', '#ff6b35'];
-            return colors[Math.floor(Math.random() * colors.length)];
-        }
-        
-        animate() {
-            this.particles.forEach((particle, index) => {
-                // 更新位置
-                const currentX = parseFloat(particle.style.left);
-                const currentY = parseFloat(particle.style.top);
-                
-                let newX = currentX + particle.vx;
-                let newY = currentY + particle.vy;
-                
-                // 邊界碰撞檢測
-                if (newX <= 0 || newX >= window.innerWidth) {
-                    particle.vx *= -1;
-                    newX = Math.max(0, Math.min(window.innerWidth, newX));
-                }
-                if (newY <= 0 || newY >= window.innerHeight) {
-                    particle.vy *= -1;
-                    newY = Math.max(0, Math.min(window.innerHeight, newY));
-                }
-                
-                particle.style.left = newX + 'px';
-                particle.style.top = newY + 'px';
-                
-                // 更新生命週期
-                particle.life--;
-                const lifeRatio = particle.life / particle.maxLife;
-                particle.style.opacity = lifeRatio * 0.8;
-                
-                // 重生粒子
-                if (particle.life <= 0) {
-                    particle.style.left = Math.random() * window.innerWidth + 'px';
-                    particle.style.top = Math.random() * window.innerHeight + 'px';
-                    particle.life = particle.maxLife;
-                    particle.vx = (Math.random() - 0.5) * 2;
-                    particle.vy = (Math.random() - 0.5) * 2;
-                }
-            });
-            
-            requestAnimationFrame(() => this.animate());
-        }
-    }
-    
-    // 初始化粒子系統
-    const particlesContainer = document.getElementById('particles');
-    if (particlesContainer) {
-        new ParticleSystem(particlesContainer);
-    }
-    
-    // ==================== 打字效果 ====================
-    const typingText = document.getElementById('typing-text');
-    const texts = [
-        '奇華智能行銷',
-        'AI科技創新',
-        '智慧製造專家',
-        '電控玻璃整合',
-        '國防科技合作'
-    ];
-    
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    
-    function typeWriter() {
-        const currentText = texts[textIndex];
-        
-        if (isDeleting) {
-            typingText.textContent = currentText.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typingText.textContent = currentText.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        
-        let typeSpeed = isDeleting ? 100 : 200;
-        
-        if (!isDeleting && charIndex === currentText.length) {
-            typeSpeed = 2000;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-            typeSpeed = 500;
-        }
-        
-        setTimeout(typeWriter, typeSpeed);
-    }
-    
-    if (typingText) {
-        setTimeout(typeWriter, 1000);
-    }
-    
-    // ==================== 數字動畫 ====================
-    function animateNumbers() {
-        const statNumbers = document.querySelectorAll('.stat-number');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const target = parseInt(entry.target.dataset.count);
-                    animateValue(entry.target, 0, target, 2000);
-                    observer.unobserve(entry.target);
-                }
-            });
-        });
-        
-        statNumbers.forEach(num => observer.observe(num));
-    }
-    
-    function animateValue(element, start, end, duration) {
-        let startTimestamp = null;
-        
-        const step = (timestamp) => {
-            if (!startTimestamp) startTimestamp = timestamp;
-            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            const currentValue = Math.floor(progress * (end - start) + start);
-            element.textContent = currentValue;
-            
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            }
-        };
-        
-        window.requestAnimationFrame(step);
-    }
-    
-    animateNumbers();
-    
-    // ==================== 滾動動畫 ====================
-    function initScrollAnimations() {
-        const animatedElements = document.querySelectorAll('section, .service-card, .news-card, .partner-card, .achievement-item, .feature-item');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
-        
-        animatedElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            observer.observe(el);
-        });
-    }
-    
-    initScrollAnimations();
-    
-    // ==================== 表單功能 ====================
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        // 表單動畫效果
-        const formGroups = document.querySelectorAll('.form-group');
-        formGroups.forEach(group => {
-            const input = group.querySelector('input, textarea, select');
-            const label = group.querySelector('label');
-            
-            if (input && label) {
-                input.addEventListener('focus', () => {
-                    group.classList.add('focused');
-                });
-                
-                input.addEventListener('blur', () => {
-                    if (!input.value) {
-                        group.classList.remove('focused');
-                    }
-                });
-                
-                input.addEventListener('input', () => {
-                    if (input.value) {
-                        group.classList.add('has-value');
-                    } else {
-                        group.classList.remove('has-value');
-                    }
-                });
-            }
-        });
-        
-        // 表單提交
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // 顯示提交動畫
-            showNotification('正在發送訊息...', 'info');
-            
-            // 模擬表單提交
-            setTimeout(() => {
-                showNotification('訊息已成功發送！我們將盡快與您聯繫。', 'success');
-                contactForm.reset();
-                
-                // 重置表單狀態
-                formGroups.forEach(group => {
-                    group.classList.remove('focused', 'has-value');
-                });
-            }, 2000);
-        });
-    }
-    
-    // ==================== 通知系統 ====================
-    function showNotification(message, type = 'info') {
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-            <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-triangle' : 'info-circle'}"></i>
-            <span>${message}</span>
-            <button class="notification-close">×</button>
-        `;
-        
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: ${type === 'success' ? '#00ff41' : type === 'error' ? '#ff1493' : '#00ffff'};
-            color: #0a0a0f;
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            z-index: 10000;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        `;
-        
-        document.body.appendChild(notification);
-        
-        // 動畫進入
-        setTimeout(() => {
-            notification.style.transform = 'translateX(0)';
-        }, 100);
-        
-        // 關閉按鈕
-        const closeBtn = notification.querySelector('.notification-close');
-        closeBtn.style.cssText = `
-            background: none;
-            border: none;
-            font-size: 1.2rem;
-            cursor: pointer;
-            color: inherit;
-            margin-left: 0.5rem;
-        `;
-        
-        closeBtn.addEventListener('click', () => {
-            removeNotification(notification);
-        });
-        
-        // 自動關閉
-        setTimeout(() => {
-            removeNotification(notification);
-        }, 5000);
-    }
-    
-    function removeNotification(notification) {
-        notification.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 300);
-    }
-    
-    // ==================== 鼠標互動效果 ====================
-    function initMouseEffects() {
-        const interactiveElements = document.querySelectorAll('.service-card, .news-card, .partner-card, .btn, .nav-link');
-        
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', function(e) {
-                createMouseEffect(e.clientX, e.clientY);
-            });
-        });
-        
-        // 鼠標跟隨效果
-        let mouseX = 0;
-        let mouseY = 0;
-        let cursorX = 0;
-        let cursorY = 0;
-        
-        document.addEventListener('mousemove', function(e) {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-        
-        // 創建自定義光標
-        const cursor = document.createElement('div');
-        cursor.style.cssText = `
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, rgba(0,255,255,0.8) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            mix-blend-mode: screen;
-            transition: transform 0.1s ease;
-        `;
-        document.body.appendChild(cursor);
-        
-        function updateCursor() {
-            cursorX += (mouseX - cursorX) * 0.1;
-            cursorY += (mouseY - cursorY) * 0.1;
-            
-            cursor.style.left = cursorX - 10 + 'px';
-            cursor.style.top = cursorY - 10 + 'px';
-            
-            requestAnimationFrame(updateCursor);
-        }
-        updateCursor();
-    }
-    
-    function createMouseEffect(x, y) {
-        const effect = document.createElement('div');
-        effect.style.cssText = `
-            position: fixed;
-            left: ${x}px;
-            top: ${y}px;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #00ffff;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            animation: ripple 0.8s ease-out forwards;
-        `;
-        
-        document.body.appendChild(effect);
-        
-        setTimeout(() => {
-            document.body.removeChild(effect);
-        }, 800);
-    }
-    
-    initMouseEffects();
-    
-    // ==================== 3D 傾斜效果 ====================
-    function init3DTilt() {
-        const tiltElements = document.querySelectorAll('.service-card, .news-card, .partner-card');
-        
-        tiltElements.forEach(element => {
-            element.addEventListener('mousemove', function(e) {
-                const rect = element.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / centerY * 10;
-                const rotateY = (centerX - x) / centerX * 10;
-                
-                element.style.transform = `
-                    perspective(1000px) 
-                    rotateX(${rotateX}deg) 
-                    rotateY(${rotateY}deg) 
-                    translateY(-10px)
-                `;
-            });
-            
-            element.addEventListener('mouseleave', function() {
-                element.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-            });
-        });
-    }
-    
-    init3DTilt();
-    
-    // ==================== 主題色彩切換效果 ====================
-    function initColorEffects() {
-        const colorElements = document.querySelectorAll('.section-title, .glow-text, h3');
-        
-        setInterval(() => {
-            colorElements.forEach(element => {
-                if (Math.random() > 0.95) { // 5% 機率觸發
-                    const originalColor = element.style.color;
-                    element.style.color = '#ff1493'; // 短暫變成粉紅色
-                    
-                    setTimeout(() => {
-                        element.style.color = originalColor;
-                    }, 200);
-                }
-            });
-        }, 1000);
-    }
-    
-    initColorEffects();
-    
-    // ==================== 響應式處理 ====================
-    function handleResize() {
-        // 重新計算粒子位置
-        if (window.innerWidth <= 768) {
-            // 移動端優化
-            document.querySelectorAll('.particle').forEach(particle => {
-                particle.style.display = Math.random() > 0.5 ? 'block' : 'none';
-            });
-        } else {
-            // 桌面端顯示所有粒子
-            document.querySelectorAll('.particle').forEach(particle => {
-                particle.style.display = 'block';
-            });
-        }
-    }
-    
-    window.addEventListener('resize', handleResize);
-    handleResize(); // 初始調用
-    
-    // ==================== 性能優化 ====================
-    // 節流函數
-    function throttle(func, limit) {
-        let inThrottle;
-        return function() {
-            const args = arguments;
-            const context = this;
-            if (!inThrottle) {
-                func.apply(context, args);
-                inThrottle = true;
-                setTimeout(() => inThrottle = false, limit);
-            }
-        };
-    }
-    
-    // 優化滾動事件
-    const optimizedScrollHandler = throttle(() => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    }, 16);
-    
-    window.addEventListener('scroll', optimizedScrollHandler);
-    
-    // ==================== 載入完成效果 ====================
-    window.addEventListener('load', function() {
-        document.body.style.opacity = '1';
-        
-        // 添加載入完成的特效
-        setTimeout(() => {
-            showNotification('歡迎來到奇華智能行銷！', 'success');
-        }, 1000);
-    });
-    
-    // 預載入樣式
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    console.log('🚀 奇華智能行銷 AI科技感網站載入完成！');
-});
-    </script>
+        <!-- 模態視窗 - 記帳 -->
+        <div class="modal" id="transactionModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content glass-morphism">
+                <div class="modal-header">
+                    <h2>記帳</h2>
+                    <button class="close-btn" data-modal="transactionModal">×</button>
+                </div>
+                <form id="transactionForm">
+                    <div class="form-group">
+                        <label>類型</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="type" value="income" checked> 收入
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="type" value="expense"> 支出
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>金額</label>
+                        <input type="number" name="amount" required placeholder="0" class="glass-input">
+                    </div>
+                    <div class="form-group">
+                        <label>日期</label>
+                        <input type="date" name="date" required class="glass-input">
+                    </div>
+                    <div class="form-group">
+                        <label>項目</label>
+                        <input type="text" name="item" required placeholder="例：簽約金、廣告費用" class="glass-input">
+                    </div>
+                    <div class="form-group">
+                        <label>所屬專案</label>
+                        <select name="projectId" id="transactionProjectSelect" class="glass-input">
+                            <option value="">一般收支</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>備註</label>
+                        <textarea name="notes" rows="2" placeholder="補充說明..." class="glass-input"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="liquid-btn btn-secondary" data-modal="transactionModal">
+                            <span>取消</span>
+                            <span class="btn-liquid"></span>
+                        </button>
+                        <button type="submit" class="liquid-btn btn-primary">
+                            <span>儲存</span>
+                            <span class="btn-liquid"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 專案詳情模態視窗 -->
+        <div class="modal" id="projectDetailModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content glass-morphism project-detail-modal">
+                <div class="modal-header">
+                    <h2 id="projectDetailTitle"></h2>
+                    <button class="close-btn" data-modal="projectDetailModal">×</button>
+                </div>
+                <div id="projectDetailContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
