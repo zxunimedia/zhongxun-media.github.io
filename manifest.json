@@ -1,0 +1,75 @@
+{
+    "name": "奇華智能行銷股份有限公司",
+    "short_name": "奇華智能",
+    "description": "李孟居總經理領導的科技創新企業，專精AI技術整合、智慧製造、電控玻璃應用與國防科技合作",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#00bfff",
+    "background_color": "#0a0a0a",
+    "orientation": "portrait-primary",
+    "categories": ["business", "technology", "productivity"],
+    "lang": "zh-TW",
+    "dir": "ltr",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🚀%3C/text%3E%3C/svg%3E",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/company-logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "images/company-logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "images/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+            "src": "images/screenshot-mobile.png", 
+            "sizes": "390x844",
+            "type": "image/png",
+            "form_factor": "narrow"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "聯絡我們",
+            "short_name": "聯絡",
+            "description": "直接聯絡奇華智能行銷",
+            "url": "/#contact",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📧%3C/text%3E%3C/svg%3E",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "核心業務",
+            "short_name": "業務",
+            "description": "查看我們的核心業務",
+            "url": "/#services",
+            "icons": [
+                {
+                    "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚙️%3C/text%3E%3C/svg%3E",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}

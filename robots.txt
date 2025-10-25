@@ -1,3 +1,36 @@
 User-agent: *
 Allow: /
-Sitemap: https://zxunimedia.github.io/sitemap.xml
+
+# Priority pages for search engines
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Block unnecessary files
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /*.md$
+Disallow: /test-*
+
+# Sitemap location
+Sitemap: https://yedcamrk.gensparkspace.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
