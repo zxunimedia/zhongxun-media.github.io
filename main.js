@@ -613,6 +613,107 @@ ${data.message}
     window.removeEventListener('scroll', function() {}); // 移除之前的監聽器
     window.addEventListener('scroll', optimizedScrollHandler);
     
+    // ==================== 法律條款功能 ====================
+    function initLegalFunctionality() {
+        // 隱私政策連結
+        const privacyLink = document.querySelector('a[href="#privacy"]');
+        const termsLink = document.querySelector('a[href="#terms"]');
+        
+        // 法律條款區域
+        const privacySection = document.getElementById('privacy-section');
+        const termsSection = document.getElementById('terms-section');
+        
+        // 關閉按鈕
+        const closeBtns = document.querySelectorAll('.legal-close');
+        
+        // 顯示隱私政策
+        if (privacyLink && privacySection) {
+            privacyLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                showLegalSection('privacy');
+            });
+        }
+        
+        // 顯示服務條款
+        if (termsLink && termsSection) {
+            termsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                showLegalSection('terms');
+            });
+        }
+        
+        // 關閉法律條款頁面
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                closeLegalSections();
+            });
+        });
+        
+        // 點擊背景關閉
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('legal-section')) {
+                closeLegalSections();
+            }
+        });
+        
+        // ESC鍵關閉
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLegalSections();
+            }
+        });
+    }
+    
+    function showLegalSection(type) {
+        // 隱藏所有法律條款
+        closeLegalSections();
+        
+        // 顯示指定的條款
+        const targetSection = document.getElementById(`${type}-section`);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 防止背景滾動
+            
+            // 平滑動畫
+            setTimeout(() => {
+                targetSection.style.opacity = '1';
+            }, 10);
+        }
+    }
+    
+    function closeLegalSections() {
+        const legalSections = document.querySelectorAll('.legal-section');
+        legalSections.forEach(section => {
+            section.style.display = 'none';
+            section.style.opacity = '0';
+        });
+        document.body.style.overflow = ''; // 恢復滾動
+    }
+    
+    // 初始化法律條款功能
+    initLegalFunctionality();
+    
+    // ==================== 社群媒體追蹤功能 ====================
+    // 社群媒體點擊追蹤函數（全域函數，供HTML onclick使用）
+    window.trackSocialClick = function(platform, account) {
+        // Google Analytics 事件追蹤
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'social_click', {
+                'event_category': 'Social Media',
+                'event_label': platform + ' - ' + account,
+                'transport_type': 'beacon'
+            });
+        }
+        
+        // 控制台記錄（開發用）
+        console.log(`Social media click tracked: ${platform} - ${account}`);
+        
+        // 可選：顯示追蹤通知
+        showNotification(`已開啟 ${platform} 社群頁面`, 'info');
+        
+        return true; // 允許正常連結跳轉
+    };
+    
     // ==================== 載入完成效果 ====================
     window.addEventListener('load', function() {
         document.body.style.opacity = '1';
